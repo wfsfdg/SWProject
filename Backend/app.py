@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import sqlite3
 
 app = Flask(__name__)
+CORS(app) 
 
 DATABASE = 'users.db'
 
@@ -19,6 +21,11 @@ def create_user_table():
     conn.commit()
     conn.close()
 
+
+create_user_table()
+
+
+
 @app.route('/signup', methods=['POST'])
 def signup():
     data = request.json
@@ -26,18 +33,18 @@ def signup():
     password = data.get('password')
 
     if not username or not password:
-        return jsonify({'message': 'Missing username or password'}), 400
+        return jsonify({'message': '아이디와 비밀번호를 입력해야 합니다'}), 400
 
     conn = get_db_connection()
     existing_user = conn.execute('SELECT * FROM users WHERE username=?', (username,)).fetchone()
     if existing_user:
-        return jsonify({'message': 'Username already exists'}), 400
+        return jsonify({'message': '이미 존재하는 사용자입니다'}), 409
 
     conn.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, password))
     conn.commit()
     conn.close()
 
-    return jsonify({'message': 'User created successfully'}), 201
+    return jsonify({'message': '사용자가 성공적으로 생성되었습니다'}), 201
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -46,17 +53,17 @@ def login():
     password = data.get('password')
 
     if not username or not password:
-        return jsonify({'message': 'Missing username or password'}), 400
+        return jsonify({'message': '아이디 또는 비밀번호가 누락되었습니다'}), 400
 
     conn = get_db_connection()
     user = conn.execute('SELECT * FROM users WHERE username=?', (username,)).fetchone()
     conn.close()
 
     if user and user['password'] == password:
-        return jsonify({'message': 'Login successful'}), 200
+        return jsonify({'message': '로그인 성공'}), 200
     else:
-        return jsonify({'message': 'Invalid username or password'}), 401
+        return jsonify({'message': '아이디 또는 비밀번호가 잘못되었습니다'}), 401
 
 if __name__ == '__main__':
-    create_user_table()
-    app.run(debug=True,host='localhost',port=5000)
+  
+    app.run(debug=True, host='localhost', port=5000)
