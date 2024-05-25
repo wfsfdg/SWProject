@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, session
 from flask_cors import CORS
 import sqlite3
 
@@ -60,6 +60,7 @@ def login():
     conn.close()
 
     if user and user['password'] == password:
+        session['username'] = username #로그인 id 킵
         return jsonify({'message': '로그인 성공'}), 200
     else:
         return jsonify({'message': '아이디 또는 비밀번호가 잘못되었습니다'}), 401
