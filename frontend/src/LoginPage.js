@@ -1,13 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './LoginPage.css'; // LoginPage 컴포넌트에 대한 CSS 파일 import
+import './LoginPage.css'; 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import logo from './image/logo.png'
 
 function LoginPage() {
   const [Username, setUsername] = useState('');
   const [Password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const login = async () => {
     try {
@@ -26,51 +28,39 @@ function LoginPage() {
       alert('Login error');
     }
   };
+  const handleSignupClick = () => {
+    navigate('/signup');
+  };
 
-  return (
-    <div className="login-container">
-      <div className="Frame301">
-        <div className="Logo" />
-        <div className="SignIn">
-          <div className="Frame300">
-            <div className="SignInText">Sign in</div>
-            <div className="Frame297">
-              <div className="Email">
-                <div className="Frame243">
-                  <div className="Label">Your ID</div>
-                </div>
-                <div className="TextField" />
-              </div>
-              <div className="TextField">
-                <div className="Frame243">
-                  <div className="Label">Your password</div>
-                </div>
-                <div className="TextField" />
-              </div>
-              <div className="Frame298">
-                <div className="Button">
-                  <button className="Frame276">
-                    <div className="LogInText">Log in</div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="Divider">
-          <div className="DividerLine"></div>
-          <div className="Or">New to our community</div>
-          <div className="DividerLine"></div>
-        </div>
-        <div className="SignUpButton">
-          <button className="Frame276">
-            <div className="SignUpText">Create an account</div>
-          </button>
-        </div>
-      </div>
-      <img className="Rectangle78" src="https://via.placeholder.com/40x40" />
+  return (<div className="login-page">
+  <div className="frame301">
+    <div className="logo">
+    <img className="rectangle78" src={logo} alt="Logo" />
     </div>
-  );
-}
+    <div className="sign-in">
+      <h2>Sign in</h2>
+      <form onSubmit={login}>
+        <div className="text-field">
+          <label htmlFor="user-id">Your ID</label>
+          <input type="text" id="user-id" name="user-id" value={Username} onChange={(e) => setUsername(e.target.value)} required />
+        </div>
+        <div className="text-field">
+          <label htmlFor="password">Your password</label>
+          <input type="password" id="password" name="password" value={Password} onChange={(e) => setPassword(e.target.value)}required />
+        </div>
+        <button type="submit" className="login-button">Log in</button>
+      </form>
+      <div className="divider">
+        <div className="line"></div>
+        <span>New to our community</span>
+        <div className="line"></div>
+      </div>
+      <button className="signup-button" onClick={handleSignupClick}>Create an account</button>
+    </div>
+  </div>
+</div>
+);
+};
+
 
 export default LoginPage;

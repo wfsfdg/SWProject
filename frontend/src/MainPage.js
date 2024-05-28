@@ -12,13 +12,13 @@ const MainPage = () => {
     navigate('/signup');
   };
   const handleLoginClick=()=>{
-    NavigationPreloadManager('/login');
+    navigate('/login');
   };
   const handleUserlistClick=()=>{
-    NavigationPreloadManager('/userlist');
+    navigate('/userlist');
   };
   const handlePhotolistClick=()=>{
-    NavigationPreloadManager('/photolist');
+    navigate('/photolist');
   };
   return (
     <div className="main-container">

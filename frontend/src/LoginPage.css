@@ -1,0 +1,150 @@
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./font/Poppins-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F3F1;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-page {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #F4F3F1;
+  }
+  
+  .frame301 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 640px;
+    height: 716px;
+    left: 400px;
+    top: 82px;
+    gap: 32px;
+  }
+  
+  .logo {width: 64px;
+    height: 64px;
+    top: 94px;
+    left: 700px;
+    gap: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#00000033;
+    background: #00000033;
+    border-radius: 50%;
+  }
+  .rectangle78{
+    width: 40px;
+    height: 40px;
+    top: 94px;
+    left: 700px;
+    gap: 0px;
+    opacity: 0px;
+    object-fit: cover;
+  }
+  
+  .sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 56px;
+    gap: 10px;
+    width: 640px;
+    height: 462px;
+    border: 1px solid #666666;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+  }
+  
+  .sign-in h2 {
+    font-size: 32px;
+    line-height: 48px;
+    color: #333333;
+  }
+  
+  .text-field {
+    display: flex;
+    flex-direction: column;
+    width: 528px;
+    margin-bottom: 20px;
+    height : 100px;
+    border-radius: 12px;
+    border: 1px;
+  }
+  
+  .text-field label {
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+    margin-bottom: 4px;
+  }
+  
+  .text-field input {
+    width: 100%;
+    height: 56px;
+    border: 1px solid #666666;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+  
+  .login-button {
+    width: 100%;
+    height: 64px;
+    background: #5A5A5A;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 32px;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 32px 0;
+    margin-top: 100px;
+  }
+  
+  .divider .line {
+    flex-grow: 1;
+    height: 2px;
+    background: #666666;
+  }
+  
+  .divider span {
+    font-size: 22px;
+    color: #666666;
+    margin: 0 16px;
+  }
+  
+  .signup-button {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #111111;
+    border-radius: 40px;
+    background: none;
+    color: #111111;
+    font-size: 22px;
+    cursor: pointer;
+    box-sizing: border-box; 
+  }

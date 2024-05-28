@@ -33,7 +33,7 @@
   line-height: 24.72px;
   text-align: left;
   display:block;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 .keep-a-diary{
   font-family: 'GangwonEduPower';
@@ -94,6 +94,8 @@
   align-items: center;
   padding: 0 20px; /* 패딩을 줄여 화면에 맞게 조정 */
   box-sizing: border-box; /* 패딩을 포함한 너비 계산 */
+  left: 0;
+  right:0;
 }
 
 .LogoAndMenu{
@@ -173,6 +175,7 @@ box-sizing: border-box;
 .main-content {
   flex: 1;
   margin-top: 72px;
+  padding-top: 72px;
   padding: 64px;
   max-width: 1200px; /* 콘텐츠 최대 너비를 설정 */
   margin-left: auto;
@@ -321,6 +324,10 @@ hr.default {
 .footer {
   background: #FFFFFF;
   padding: 40px;
+  left:0;
+  right:0;
+  width:100%;
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -387,3 +394,4 @@ hr.default {
 .product {
   color: #111111;
 }
+
