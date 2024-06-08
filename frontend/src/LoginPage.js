@@ -1,66 +1,93 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import rectangle77 from './img/rectangle-77.png';
+import './css/LoginPage.css'
+import './css/globals.css'
+import './css/styleguide.css'
 import axios from 'axios';
-import './LoginPage.css'; 
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import logo from './image/logo.png'
+import api from './api'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-function LoginPage() {
-  const [Username, setUsername] = useState('');
+const LoginPage = () => {
+  const [ID, setID] = useState('');
   const [Password, setPassword] = useState('');
   const navigate = useNavigate();
-
-  const login = async () => {
-    try {
-      if(!Password||!Username)
-        {
-          alert('Username and password are required');
-          return;
-        }
-      const response = await axios.post('http://localhost:5000/login', { username: Username, password: Password });
-      if (response.status === 200) {
-        alert('Login successful');
-      } else {
-        alert('Invalid username or password');
-      }
-    } catch (error) {
-      alert('Login error');
-    }
-  };
   const handleSignupClick = () => {
     navigate('/signup');
   };
-
-  return (<div className="login-page">
-  <div className="frame301">
-    <div className="logo">
-    <img className="rectangle78" src={logo} alt="Logo" />
-    </div>
-    <div className="sign-in">
-      <h2>Sign in</h2>
-      <form onSubmit={login}>
-        <div className="text-field">
-          <label htmlFor="user-id">Your ID</label>
-          <input type="text" id="user-id" name="user-id" value={Username} onChange={(e) => setUsername(e.target.value)} required />
+  const login = async () => {
+    try {
+      if (!ID || !Password) {
+        alert('Username and password are required');
+        return;
+      }
+      const response = await axios.post('http://localhost:5000/login', { userID: ID, password: Password });
+      if (response.status === 200) {
+        alert('Login successful');
+        navigate('/main');
+      }
+    } catch (error) {
+      if (error.response) {
+        if (error.response.status === 401) {
+          alert('Invalid username or password');
+        } else {
+          alert(`Unexpected error: ${error.response.status} - ${error.response.data.message}`);
+        }
+      } else if (error.request) {
+        alert('No response from the server. Please try again later.');
+      } else {
+        alert('Login error. Please check your input and try again.');
+      }
+    }
+  };
+  return (
+    <div className="container-center-horizontal">
+      <div className="login screen">
+        <div className="view">
+          <div className="overlap-group">
+            <div className="frame-301">
+              <div className="logo"></div>
+              <div className="sign-in">
+                <div className="frame-300">
+                  <h1 className="title valign-text-middle">Sign in</h1>
+                  <div className="frame-297">
+                    <div className="frame-297-item">
+                      <div className="frame-243"><div className="label">Your ID</div></div>
+                      <input type="text" className="text-field" value={ID} onChange={(e) => setID(e.target.value)} />
+                    </div>
+                    <div className="frame-297-item">
+                      <div className="frame-243"><div className="label">Your password</div></div>
+                      <input type="password" className="text-field" value={Password} onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                    <div className="frame-298">
+                      <div className="button" onClick={login}>
+                        <div className="frame-276">
+                          <div className="sign-up valign-text-middle">Log in</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="divider-1">
+                <div className="divider"></div>
+                <div className="or valign-text-middle">New to our community</div>
+                <div className="divider"></div>
+              </div>
+              <div className="button-1">
+                <div className="frame-276-1">
+                  <div className="sign-up-1 valign-text-middle" onClick={handleSignupClick}>
+                    Create an account
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img className="rectangle-78" src={rectangle77} alt="Rectangle 78" />
+          </div>
         </div>
-        <div className="text-field">
-          <label htmlFor="password">Your password</label>
-          <input type="password" id="password" name="password" value={Password} onChange={(e) => setPassword(e.target.value)}required />
-        </div>
-        <button type="submit" className="login-button">Log in</button>
-      </form>
-      <div className="divider">
-        <div className="line"></div>
-        <span>New to our community</span>
-        <div className="line"></div>
       </div>
-      <button className="signup-button" onClick={handleSignupClick}>Create an account</button>
     </div>
-  </div>
-</div>
-);
-};
-
+  );
+}
 
 export default LoginPage;

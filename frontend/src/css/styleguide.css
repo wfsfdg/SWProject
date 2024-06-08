@@ -1,0 +1,14 @@
+:root { 
+    --black: #000000;
+    --granite-gray: #666666;
+    --white: #ffffff;
+   
+    --font-size-l: 32px;
+    --font-size-m: 22px;
+    --font-size-s: 20px;
+    --font-size-xs: 16px;
+   
+    --font-family-avenir-roman: "Avenir-Roman", Helvetica;
+    --font-family-poppins: "Poppins", Helvetica;
+  }
+  

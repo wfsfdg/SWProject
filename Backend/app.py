@@ -3,7 +3,8 @@ from flask_cors import CORS
 import sqlite3
 
 app = Flask(__name__)
-CORS(app) 
+app.secret_key = 'secret_key' 
+CORS(app,supports_credentials=True) 
 
 DATABASE = 'users.db'
 
@@ -16,7 +17,8 @@ def create_user_table():
     conn = get_db_connection()
     conn.execute('''CREATE TABLE IF NOT EXISTS users
                  (id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                 username TEXT NOT NULL, 
+                 username TEXT NOT NULL,
+                 userID TEXT NOT NULL, 
                  password TEXT NOT NULL)''')
     conn.commit()
     conn.close()
@@ -30,17 +32,21 @@ create_user_table()
 def signup():
     data = request.json
     username = data.get('username')
+    userID = data.get('userID')
     password = data.get('password')
 
-    if not username or not password:
-        return jsonify({'message': '아이디와 비밀번호를 입력해야 합니다'}), 400
+    if not username or not password or not userID:
+        return jsonify({'message': '모든 내용을 입력해야 합니다'}), 400
 
     conn = get_db_connection()
-    existing_user = conn.execute('SELECT * FROM users WHERE username=?', (username,)).fetchone()
-    if existing_user:
+    existing_username = conn.execute('SELECT * FROM users WHERE username=?', (username,)).fetchone()
+    existing_userID = conn.execute('SELECT * FROM users WHERE userID=?', (userID,)).fetchone()
+    if existing_userID:
         return jsonify({'message': '이미 존재하는 사용자입니다'}), 409
+    if existing_username:
+        return jsonify({'message': '이미 존재하는 사용자입니다'}), 409    
 
-    conn.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, password))
+    conn.execute('INSERT INTO users (username, userID, password) VALUES (?, ?, ?)', (username, userID, password))
     conn.commit()
     conn.close()
 
@@ -49,18 +55,19 @@ def signup():
 @app.route('/login', methods=['POST'])
 def login():
     data = request.json
-    username = data.get('username')
+    userID = data.get('userID')
     password = data.get('password')
+    username = data.get('username')
 
-    if not username or not password:
+    if not userID or not password:
         return jsonify({'message': '아이디 또는 비밀번호가 누락되었습니다'}), 400
 
     conn = get_db_connection()
-    user = conn.execute('SELECT * FROM users WHERE username=?', (username,)).fetchone()
+    user = conn.execute('SELECT * FROM users WHERE userID=?', (userID,)).fetchone()
     conn.close()
 
     if user and user['password'] == password:
-        session['username'] = username #로그인 id 킵
+        session['username'] = user['username'] #username 킵
         return jsonify({'message': '로그인 성공'}), 200
     else:
         return jsonify({'message': '아이디 또는 비밀번호가 잘못되었습니다'}), 401

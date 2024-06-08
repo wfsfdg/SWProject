@@ -1,0 +1,243 @@
+/* screen - login */
+
+.login {
+  align-items: flex-start;
+  display: flex;
+  min-width: 1440px;
+}
+
+.login .view {
+  align-items: flex-start;
+  background-color: #f4f3f1;
+  display: flex;
+  height: 1024px;
+  padding: 82px 400px;
+  width: 1440px;
+}
+
+.login .overlap-group {
+  height: 716px;
+  position: relative;
+  width: 640px;
+}
+
+.login .frame-301 {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.login .logo {
+  background-color: #00000033;
+  border-radius: 32px;
+  height: 64px;
+  position: relative;
+  width: 64px;
+}
+
+.login .sign-in {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--granite-gray);
+  border-radius: 24px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  padding: 40px 56px;
+  position: relative;
+}
+
+.login .frame-300 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: center;
+  position: relative;
+}
+
+.login .title {
+  color: #333333;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.login .frame-297 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.login .frame-297-item {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  width: 528px;
+}
+
+.login .frame-243 {
+  align-self: stretch;
+  height: 27px;
+  position: relative;
+  width: 100%;
+}
+
+.login .label {
+  color: var(--granite-gray);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+}
+
+.login .text-field {
+  align-self: stretch;
+  border: 1px solid;
+  border-color: var(--granite-gray);
+  border-radius: 12px;
+  height: 56px;
+  position: relative;
+  width: 100%;
+}
+
+.login .frame-298 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.login .button {
+  background-color: #595959;
+  border-radius: 40px;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
+  width: 528px;
+}
+
+.login .frame-276 {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  left: 232px;
+  position: relative;
+  top: 15px;
+}
+
+.login .sign-up {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.login .divider-1 {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 23px;
+  position: relative;
+  width: 640px;
+}
+
+.login .divider {
+  background-color: var(--granite-gray);
+  flex: 1;
+  flex-grow: 1;
+  height: 2px;
+  position: relative;
+}
+
+.login .or {
+  color: var(--granite-gray);
+  font-family: var(--font-family-avenir-roman);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.login .button-1 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: #111111;
+  border-radius: 40px;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
+  width: 640px;
+  cursor: pointer;
+}
+
+.login .frame-276-1 {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  left: 226px;
+  position: relative;
+  top: 16px;
+}
+
+.login .sign-up-1 {
+  color: #111111;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.login .rectangle-78 {
+  height: 40px;
+  left: 300px;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  width: 40px;
+}

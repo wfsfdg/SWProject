@@ -1,10 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MainPage.css';
-import logo from './image/logo.png'
-import photodiary from './image/PhotoDiary.png'
-import { Link } from 'react-router-dom';
-import mainimg from './image/main_image.png';
+import './css/MainPage.css';
+import './css/globals.css'
+import rectangle77 from './img/rectangle-77.png';
+import image1 from './img/image-1.png';
+import image4 from './img/image-4.png';
+
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -20,97 +21,103 @@ const MainPage = () => {
   const handlePhotolistClick=()=>{
     navigate('/photolist');
   };
-  return (
-    <div className="main-container">
-      <div className="header-nav">
-        <div className="LogoAndMenu">
-        <img className="rectangle77" src={logo} alt="Logo" />
-        <div className="links">
-          <Link to="/" className="home UpHome">Home</Link>
-          <Link to="/userlist" className="user-list">User list</Link>
-          <Link to="/photolist" className="photo-list">Photo list</Link>
-        </div>
-        </div>
-        <div className="login-signup">
-          <div className="button login" onClick={handleLoginClick}>
-            <div className="button-text">Log in</div>
-          </div>
-          <div className="button signup" onClick={handleSignupClick}>
-            <div className="button-text">Sign in</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="main-content">
-        <div classname="frame1">
-          <div className="content">
-            <div className="frame45">
-              <div className="take-a-picture">Take a picture</div>
-              <div className="keep-a-diary">Keep a diary</div>
+  const handleMainPageClick=()=>{
+    navigate('/');
+  }
+ return (
+    <div className="container-center-horizontal">
+      <div className="mainpage screen">
+        <div className="header-nav">
+          <div className="flex-row">
+            <img className="rectangle-77" src={rectangle77} alt="Rectangle 77" />
+            <div className="links">
+              <div className="place" onClick={handleMainPageClick}>Home</div>
+              <div className="x-list" onClick={handleUserlistClick}>User List</div>
+              <div className="x-list" onClick={handlePhotolistClick}>Photo List</div>
             </div>
-            <div className="frame14559">
-             <div className="rectangle76" />
-              <div className="frame14568">
-                <div className="photo-diary-description">
-                Your own story that records with photos, 'Photo Diary' Our daily lives go by quickly, and precious moments are often forgettable. We want to capture personal photo diaries into the digital world. "Photo Diary" isn't just a photo repository. It's a space where you can express your thoughts, emotions, and moments in pictures and texts, and communicate with other users.
+            <div className="login-sign-up">
+              <article className="button">
+                <div className="frame-276">
+                  <div className="sign-up valign-text-middle" onClick={handleLoginClick}>Log in</div>
                 </div>
-                <div className="primary-button" onClick={handleSignupClick}>
-                  <div className="get-started">Get started</div>
+              </article>
+              <article className="button-1">
+                <div className="frame-276-1">
+                  <div className="sign-up-1 valign-text-middle" onClick={handleSignupClick}>Sign up</div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div className="divider-1"></div>
+        </div>
+        <div className="view">
+          <div className="flex-row-1">
+            <div className="content">
+              <div className="frame-45">
+                <h1 className="title valign-text-middle">Take a picture</h1>
+                <div className="keep-a-diary valign-text-middle">Keep a diary</div>
+              </div>
+              <div className="frame-14559">
+                <div className="rectangle-76"></div>
+                <div className="frame-14568">
+                  <p className="x valign-text-middle">
+                    Your own story that records with photos, &#39;Photo Diary&#39;<br />
+                    Our daily lives go by quickly, and precious moments are often forgettable. We want to capture
+                    personal photo diaries into the digital world.<br />
+                    &#34;Photo Diary&#34; isn&#39;t just a photo repository. It&#39;s a space where you can express your
+                    thoughts, emotions, and moments in pictures and texts, and communicate with other users.
+                  </p>
+                  <div className="primary-button">
+                    <div className="get-started">Get started</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <img className="image1" src={mainimg} alt="Main Visual" />
+            <img className="image-1" src={image1} alt="image 1" />
           </div>
+          <div className="card">
+            <div className="frame-14560">
+              <div className="frame-14565" onClick={handleUserlistClick}>
+                <div className="x-list-1">User List</div>
+                <p className="text_label">Click to view the list of users</p>
+              </div>
+            </div>
+            <div className="frame-14561">
+              <div className="frame-14565" onClick={handlePhotolistClick}>
+                <div className="x-list-1">Photo List</div>
+                <p className="text_label-1">Click to check the list of photos</p>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div className="card-container">
-          <div className="card1" onclick={handleUserlistClick}>
-            <div className="frame14560" >
-              <div className="frame14565">
-                <div className="user-list-title">User list</div>
-                <div className="user-list-description">Click to check the list of users</div>
+        <div className="overlap-group">
+          <footer className="footer">
+            <div className="frame-275">
+              <div className="divider"></div>
+              <div className="frame-274">
+                <div className="frame-269">
+                  <div className="frame-268">
+                    <div className="product valign-text-middle">Developer</div>
+                    <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">Lee Seunghyun</div>
+                    <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">2022112088</div>
+                    <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">Choi Yoongi</div>
+                    <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">2019112156</div>
+                  </div>
+                </div>
+              </div>
+              <div className="divider"></div>
+              <div className="group-6">
+                <div className="frame-272">
+                  <div className="copyright-2022 valign-text-middle">@software engineering 2024</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="card2">
-            <div className="frame14561" onclick={handlePhotolistClick}>
-              <div className="frame14565" >
-                <div className="photo-list-title">Photo list</div>
-                <div className="photo-list-description">Click to check the list of photos</div>
-              </div>
-            </div>
-          </div>
+          </footer>
+          <img className="image-4" src={image4} alt="image 4" />
         </div>
       </div>
-
-      <div className="footer">
-        <div className="frame275">
-        <hr class="default"></hr>
-          <div className="frame274">
-            <div className="frame269">
-            <img className="image4" src={photodiary} alt="Footer Image" />
-              <div className="frame268">
-                <div className="product">개발자</div>
-                <div className="pricing">이승현</div>
-                <div className="solutions">2022112088</div>
-                <div className="education">최윤기</div>
-                <div className="team-plans">2019112156</div>
-              </div>
-              
-            </div>
-          </div>
-          <hr class="default"></hr>
-          <div className="group6">
-            <div className="frame272">
-         
-            </div>
-            <div className="frame271" />
-          </div>
-        </div>
-      </div>
-      <div className="copyright2022">@소프트웨어 공학 2024</div>
     </div>
   );
-};
+}
 
 export default MainPage;

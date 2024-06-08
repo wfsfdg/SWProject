@@ -1,0 +1,496 @@
+/* screen - mainpage */
+
+.mainpage {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 1536px;
+  width: 1440px;
+}
+@font-face {
+  font-family: 'GangwonEduPower';
+  src: url('../fonts/GangwonEduPower.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GangwonEduAll';
+  src: url('../fonts/GangwonEduAll.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mainpage .header-nav {
+  align-items: center;
+  background-color: #FFFFFF;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #c9c9c940;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 72px;
+  width: 1440px;
+}
+
+.mainpage .flex-row {
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+  min-width: 1360px;
+}
+
+.mainpage .rectangle-77 {
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.mainpage .links {
+  align-items: flex-end;
+  display: inline-flex;
+  gap: 40px;
+  margin-left: 40px;
+  margin-top: 8.0px;
+  position: relative;
+}
+
+.mainpage .place {
+  color: var(--licorice);
+  font-family: 'Poppins';
+  font-size: var(--font-size-xxxs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.mainpage .x-list {
+  color: #666666cc;
+  font-family: 'Poppins';
+  font-size: var(--font-size-xxxs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.mainpage .login-sign-up {
+  align-items: center;
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+  margin-left: 799px;
+  position: relative;
+}
+
+.mainpage .button {
+  border: 1px solid;
+  border-color: var(--licorice);
+  border-radius: 8px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  width: 98px;
+  cursor: pointer;
+}
+
+.mainpage .frame-276 {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  left: 26px;
+  position: relative;
+  top: 8px;
+}
+
+.mainpage .sign-up {
+  color: var(--licorice);
+  font-family: 'Poppins';
+  font-size: var(--font-size-xxxs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.mainpage .button-1 {
+  background-color: #111111;
+  border: 1px solid;
+  border-radius: 8px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  width: 98px;
+  cursor : pointer;
+}
+
+.mainpage .frame-276-1 {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  left: 19px;
+  position: relative;
+  top: 8px;
+
+}
+
+.mainpage .sign-up-1 {
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-size: var(--font-size-xxxs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.mainpage .divider-1 {
+  background-color: #d4d4d4;
+  height: 1px;
+  width: 1440px;
+}
+
+.mainpage .view {
+  align-items: flex-end;
+  background-color: #f3f2f0;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  height: 1024px;
+  padding: 104px 47px;
+  width: 1440px;
+}
+
+.mainpage .flex-row-1 {
+  align-items: center;
+  display: flex;
+  min-width: 1329px;
+}
+
+.mainpage .content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  margin-top: 18.0px;
+  min-height: 490px;
+  width: 694px;
+}
+
+.mainpage .frame-45 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: -53px;
+  min-height: 188px;
+  padding: 5px 0;
+  width: 681px;
+}
+
+.mainpage .title {
+  color: var(--black);
+  font-family: 'GangwonEduPower';
+  font-size: 72px;
+  font-weight: bolder;
+  height: 74px;
+  letter-spacing: 0.72px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.mainpage .keep-a-diary {
+  align-self: center;
+  color: var(--jaguar);
+  font-family: 'GangwonEduPower';
+  font-size: 72px;
+  font-weight: bolder;
+  height: 74px;
+  letter-spacing: 0.72px;
+  line-height: normal;
+  margin-right: 1.0px;
+  min-width: 448px;
+  white-space: nowrap;
+}
+
+.mainpage .frame-14559 {
+  align-items: flex-start;
+  display: flex;
+  gap: 32px;
+  position: relative;
+  width: 681px;
+}
+
+.mainpage .rectangle-76 {
+  align-self: stretch;
+  background-color: var(--jaguar);
+  position: relative;
+  width: 6px;
+}
+
+.mainpage .frame-14568 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.mainpage .x {
+  color: var(--jaguar);
+  font-family: 'GangwonEduAll';
+  font-size: 27px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-top: -1.00px;
+  position: relative;
+  width: 632px;
+}
+
+.mainpage .primary-button {
+  align-items: flex-start;
+  border-radius: 40px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  overflow: hidden;
+  padding: 24px 56px;
+  position: relative;
+  cursor: pointer;
+  background-color: #06040A;
+}
+
+.mainpage .get-started {
+  color: #FFFFFF;
+  font-family: 'GangwonEduPower';
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.mainpage .image-1 {
+  height: 594px;
+  object-fit: cover;
+  width: 635px;
+}
+
+.mainpage .card {
+  align-items: flex-start;
+  align-self: center;
+  display: inline-flex;
+  margin-left: 4.0px;
+  position: relative;
+}
+
+.mainpage .frame-14560 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 48px 36px;
+  position: relative;
+  width: 654px;
+  background-color: #FFFFFF;
+}
+
+.mainpage .frame-14565 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.mainpage .x-list-1 {
+  color: var(--jaguar);
+  font-family: 'GangwonEduPower';
+  font-size: 24px;
+  font-weight: bolder;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.mainpage .text_label {
+  color: var(--jaguar);
+  font-family: 'GangwonEduAll';
+  font-size: var(--font-size-xxs);
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: 293px;
+}
+
+.mainpage .frame-14561 {
+  align-items: flex-start;
+  background-color: #cbc4b9;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 48px 36px;
+  position: relative;
+  width: 654px;
+}
+
+.mainpage .text_label-1 {
+  color: var(--jaguar);
+  font-family: 'GangwonEduAll';
+  font-size: var(--font-size-xxs);
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: 285px;
+}
+
+.mainpage .overlap-group {
+  height: 440px;
+  position: relative;
+  width: 1440px;
+}
+
+.mainpage .footer {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  height: 440px;
+  justify-content: flex-start;
+  left: 0;
+  padding: 48px 111px;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.mainpage .frame-275 {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  position: relative;
+}
+
+.mainpage .divider {
+  background-color: #66666640;
+  height: 1px;
+  position: relative;
+  width: 1218px;
+}
+
+.mainpage .frame-274 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 155px;
+  position: relative;
+}
+
+.mainpage .frame-269 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 64px;
+  position: relative;
+}
+
+.mainpage .frame-268 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.mainpage .product {
+  color: #333333;
+  font-family: 'Poppins';
+  font-size: var(--font-size-xxxs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mainpage .frame-268-item {
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.mainpage .group-6 {
+  height: 24px;
+  position: relative;
+  width: 1131px;
+}
+
+.mainpage .frame-272 {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 56px;
+  position: relative;
+  top: 1px;
+}
+
+.mainpage .copyright-2022 {
+  color: #333333;
+  font-family: 'Poppins';
+  font-size: var(--font-size-xxxxs);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.mainpage .image-4 {
+  height: 134px;
+  left: 199px;
+  object-fit: cover;
+  position: absolute;
+  top: 86px;
+  width: 300px;
+}
