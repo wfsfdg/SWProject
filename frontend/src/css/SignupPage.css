@@ -1,0 +1,232 @@
+/* screen - signup */
+
+.signup {
+    align-items: flex-start;
+    display: flex;
+    min-width: 1440px;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  .signup .view {
+    align-items: flex-start;
+    background-color: #f4f3f1;
+    display: flex;
+    gap: 251px;
+    height: 1024px;
+    padding: 40px 48px;
+    width: 1440px;
+  }
+  
+  .signup .overlap-group {
+    align-items: center;
+    background-color: #00000033;
+    border-radius: 32px;
+    display: flex;
+    height: 64px;
+    min-width: 64px;
+    padding: 0 12px;
+  }
+  
+  .signup .rectangle-78 {
+    height: 40px;
+    object-fit: cover;
+    width: 40px;
+  }
+  
+  .signup .content {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 72px;
+    justify-content: center;
+    margin-top: 53px;
+    position: relative;
+  }
+  
+  .signup .frame-8 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .signup .title {
+    color: #333333;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-weight: bolder;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .signup .have-an-account-login {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    padding: 2px;
+    position: relative;
+  }
+  
+  .signup .already-have-an-ccount-log-in {
+    color: transparent;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .signup .span0 {
+    color: #333333;
+  }
+  
+  .signup .span2 {
+    color: #111111;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .signup .frame-221 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+  }
+  
+  .signup .text-field {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    width: 715px;
+  }
+  
+  .signup .frame-243 {
+    align-self: stretch;
+    height: 27px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .signup .label {
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    font-family: 'Poppins';
+  }
+  
+  .signup .text-field-1 {
+    align-self: stretch;
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: #666666;
+    border-radius: 12px;
+    height: 56px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    font-family: 'Poppins';
+    font-size:16px;
+  }
+  
+  .signup .inputs {
+    align-items: center;
+    display: inline-flex;
+    left: 24px;
+    position: relative;
+    top: 15px;
+    color: #66666699;
+    font-family: 'Poppins';
+  }
+  
+  .signup .input {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+    align-items: center;
+    display: inline-flex;
+    left: 24px;
+    position: relative;
+    top: 15px;
+    color: #66666699;
+    font-family: 'Poppins';
+    border :none;
+    background-color: transparent;
+  }
+  
+  .signup .error-message {
+    color: #666666;
+    font-family:'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .signup .frame-222 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+  }
+  
+  .signup .button {
+    background-color: #595959;
+    border-radius: 40px;
+    height: 64px;
+    overflow: hidden;
+    position: relative;
+    width: 715px;
+    cursor: pointer;
+  }
+  
+  .signup .frame-276 {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    left: 254px;
+    position: relative;
+    top: 15px;
+  }
+  
+  .signup .sign-up {
+    color: var(--white);
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  

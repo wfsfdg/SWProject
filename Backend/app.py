@@ -42,9 +42,9 @@ def signup():
     existing_username = conn.execute('SELECT * FROM users WHERE username=?', (username,)).fetchone()
     existing_userID = conn.execute('SELECT * FROM users WHERE userID=?', (userID,)).fetchone()
     if existing_userID:
-        return jsonify({'message': '이미 존재하는 사용자입니다'}), 409
+        return jsonify({'message': '이미 존재하는 ID입니다'}), 409
     if existing_username:
-        return jsonify({'message': '이미 존재하는 사용자입니다'}), 409    
+        return jsonify({'message': '이미 존재하는 사용자명입니다'}), 410    
 
     conn.execute('INSERT INTO users (username, userID, password) VALUES (?, ?, ?)', (username, userID, password))
     conn.commit()
