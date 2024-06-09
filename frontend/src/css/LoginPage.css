@@ -45,6 +45,7 @@
   height: 64px;
   position: relative;
   width: 64px;
+  cursor: pointer;
 }
 
 .login .sign-in {
@@ -247,4 +248,5 @@
   position: absolute;
   top: 12px;
   width: 40px;
+  cursor: pointer;
 }

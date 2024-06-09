@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/MainPage.css';
 import './css/globals.css'
 import rectangle77 from './img/rectangle-77.png';
 import image1 from './img/image-1.png';
 import image4 from './img/image-4.png';
-
+import axios from 'axios';
 
 const MainPage = () => {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleSignupClick = () => {
     navigate('/signup');
   };
@@ -21,9 +22,28 @@ const MainPage = () => {
   const handlePhotolistClick=()=>{
     navigate('/photolist');
   };
-  const handleMainPageClick=()=>{
-    navigate('/');
-  }
+  useEffect(() => {
+    const fetchSession = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/session', { withCredentials: true });
+        if (response.status === 200 && response.data.message) {
+          const message = response.data.message;
+          if (message.startsWith('Hello ')) {
+            setIsLoggedIn(true);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching session', error);
+      }
+    };
+    fetchSession();
+  }, []);
+const handleMainPageClick=()=>{
+  if (isLoggedIn)
+    navigate('/loggedin');
+  else
+  navigate('/');
+}
  return (
     <div className="container-center-horizontal">
       <div className="mainpage screen">
@@ -68,7 +88,7 @@ const MainPage = () => {
                     thoughts, emotions, and moments in pictures and texts, and communicate with other users.
                   </p>
                   <div className="primary-button">
-                    <div className="get-started">Get started</div>
+                    <div className="get-started" onClick={handleSignupClick}>Get started</div>
                   </div>
                 </div>
               </div>

@@ -85,6 +85,7 @@
   position: relative;
   width: fit-content;
   cursor: pointer;
+  white-space: nowrap; 
 }
 
 .mainpage .login-sign-up {
@@ -244,7 +245,7 @@
 
 .mainpage .rectangle-76 {
   align-self: stretch;
-  background-color: var(--jaguar);
+  background-color: #06040A;
   position: relative;
   width: 6px;
 }

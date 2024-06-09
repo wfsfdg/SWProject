@@ -3,10 +3,11 @@ from flask_cors import CORS
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = 'secret_key' 
-CORS(app,supports_credentials=True) 
+app.secret_key = 'secret_key'
+CORS(app, supports_credentials=True, origins=["http://localhost:3000"])  # 클라이언트 주소 추가
 
 DATABASE = 'users.db'
+current_username = None  # 초기값을 None으로 설정
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
@@ -23,10 +24,18 @@ def create_user_table():
     conn.commit()
     conn.close()
 
+def get_username_by_userid(userID):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute('SELECT username FROM users WHERE userID = ?', (userID,))
+    result = cursor.fetchone()
+    conn.close()
+    if result:
+        return result['username']
+    else:
+        return None
 
 create_user_table()
-
-
 
 @app.route('/signup', methods=['POST'])
 def signup():
@@ -54,10 +63,10 @@ def signup():
 
 @app.route('/login', methods=['POST'])
 def login():
+    global current_username  # 전역 변수 수정할 때 필요
     data = request.json
     userID = data.get('userID')
     password = data.get('password')
-    username = data.get('username')
 
     if not userID or not password:
         return jsonify({'message': '아이디 또는 비밀번호가 누락되었습니다'}), 400
@@ -67,11 +76,28 @@ def login():
     conn.close()
 
     if user and user['password'] == password:
-        session['username'] = user['username'] #username 킵
-        return jsonify({'message': '로그인 성공'}), 200
+        username = get_username_by_userid(userID)
+        current_username = username  # 전역 변수에 저장
+        print(f'f{current_username}')
+        return jsonify({'message': '로그인 성공', 'username': username}), 200
     else:
         return jsonify({'message': '아이디 또는 비밀번호가 잘못되었습니다'}), 401
 
+@app.route('/logout', methods=['POST'])
+def logout():
+    global current_username  # 전역 변수 수정할 때 필요
+    current_username = None  # 초기값으로 되돌림
+    print(f'{current_username}')
+    return jsonify({'message': '로그아웃 성공'}), 200
+
+@app.route('/session', methods=['GET'])
+def get_session():
+    print(f'{current_username}')
+    if current_username is None:
+        return jsonify({'message': 'No user logged in'}), 401
+    else:
+        username = current_username
+        return jsonify({'message': f'Hello {username}'}), 200
+
 if __name__ == '__main__':
-  
     app.run(debug=True, host='localhost', port=5000)

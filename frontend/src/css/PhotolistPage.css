@@ -1,0 +1,179 @@
+/* screen - PhotolistPage */
+
+.PhotolistPage {
+    align-items: flex-end;
+    background-color: #f3f2f0;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    height: 1527px;
+    padding: 50px 111px;
+    width: 1440px;
+  }
+  
+  .PhotolistPage .flex-col {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    margin-left: 1.0px;
+    min-height: 193px;
+    width: 819px;
+  }
+  
+  .PhotolistPage .title {
+    color: #06040a;
+    font-family: var(--font-family-gangwonedupower-extrabold);
+    font-size: var(--font-size-l);
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: 1.0px;
+    min-height: 80px;
+    text-align: center;
+    width: 226px;
+  }
+  
+  .PhotolistPage .frame-14562 {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: var(--black);
+    border-radius: 12px;
+    display: flex;
+    gap: 641px;
+    height: 82px;
+    justify-content: flex-end;
+    min-width: 819px;
+    padding: 0 16px;
+  }
+  
+  .PhotolistPage .enter-tag {
+    color: var(--mine-shaft);
+    font-family: var(--font-family-lato);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-bottom: 2.0px;
+    min-height: 26px;
+    min-width: 88px;
+    white-space: nowrap;
+  }
+  
+  .PhotolistPage .image-7 {
+    height: 50px;
+    object-fit: cover;
+    width: 50px;
+  }
+  
+  .PhotolistPage .flex-row {
+    align-items: flex-start;
+    display: flex;
+    gap: 108px;
+    height: 1013px;
+    min-width: 1184px;
+  }
+  
+  .PhotolistPage .button-container {
+    flex-direction: column;
+    gap: 143px;
+    min-height: 886px;
+    width: 200px;
+  }
+  
+  .PhotolistPage .button {
+    align-items: flex-start;
+    background-color: var(--cloud);
+    border: 1px solid;
+    border-color: var(--licorice);
+    border-radius: 20px;
+    display: flex;
+    height: 200px;
+    overflow: hidden;
+    padding: 86.5px 68px;
+    width: 200px;
+  }
+  
+  .PhotolistPage .pohto-1 {
+    height: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    min-width: 64px;
+    text-align: center;
+  }
+  
+  .PhotolistPage .pohto {
+    height: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    min-width: 64px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .PhotolistPage .flex-col-1 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    min-height: 1000px;
+    width: 876px;
+  }
+  
+  .PhotolistPage .button-1 {
+    background-color: var(--licorice);
+    border: 1px solid;
+    border-radius: 20px;
+    height: 40px;
+    overflow: hidden;
+    padding: 6.5px 20.5px;
+    width: 98px;
+  }
+  
+  .PhotolistPage .sign-up {
+    color: #ffffff;
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    height: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    min-width: 57px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .PhotolistPage .text-2 {
+    margin-top: 101px;
+  }
+  
+  .PhotolistPage .text {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: 12px;
+    min-height: 104px;
+    width: 842px;
+  }
+  
+  .PhotolistPage .text-3 {
+    margin-top: 188px;
+  }
+  
+  .PhotolistPage .text-4 {
+    margin-top: 179px;
+  }
+  
+  .PhotolistPage .button-2 {
+    align-items: flex-start;
+    align-self: flex-end;
+    display: flex;
+  }
+  
+  .PhotolistPage .text-1 {
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 48px;
+    white-space: nowrap;
+  }
+  

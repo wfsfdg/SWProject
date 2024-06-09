@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/SignupPage.css';
 import './css/styleguide.css';
@@ -11,7 +11,18 @@ const SignupPage = () => {
     const [ID, setID] = useState('');
     const [Password, setPassword] = useState('');
     const [Username, setUsername] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate();
+    const handleSignupClick = () => {
+      navigate('/signup');
+    };
+    const handleUserlistClick=()=>{
+      navigate('/userlist');
+    };
+    const handlePhotolistClick=()=>{
+      navigate('/photolist');
+    };
+
     const handleLoginClick = () => {
         navigate('/login');
     };
@@ -25,6 +36,7 @@ const SignupPage = () => {
           if (response.status === 201) {
             alert('User created successfully');
             console.log(response.data.user);
+            handleLoginClick();
           }
         } catch (error) {
           if (error.response.status === 409) {
@@ -38,13 +50,35 @@ const SignupPage = () => {
             console.log(error.response);
           }
         }
-      };
+      };  
+      useEffect(() => {
+        const fetchSession = async () => {
+          try {
+            const response = await axios.get('http://localhost:5000/session', { withCredentials: true });
+            if (response.status === 200 && response.data.message) {
+              const message = response.data.message;
+              if (message.startsWith('Hello ')) {
+                setIsLoggedIn(true);
+              }
+            }
+          } catch (error) {
+            console.error('Error fetching session', error);
+          }
+        };
+        fetchSession();
+      }, []);
+    const handleMainPageClick=()=>{
+      if (isLoggedIn)
+        navigate('/loggedin');
+      else
+      navigate('/');
+    }
     return (
         <div className="container-center-horizontal">
           <div className="signup screen">
             <div className="view">
-              <div className="overlap-group">
-                <img className="rectangle-78" src={rectangle77} alt="Rectangle 78" />
+              <div className="overlap-group"onClick={handleMainPageClick}>
+                <img className="rectangle-78" src={rectangle77} onClick={handleMainPageClick} alt="Rectangle 78" />
               </div>
               <div className="content">
                 <div className="frame-8">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import rectangle77 from './img/rectangle-77.png';
 import './css/LoginPage.css'
@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 const LoginPage = () => {
   const [ID, setID] = useState('');
   const [Password, setPassword] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
   const handleSignupClick = () => {
     navigate('/signup');
@@ -24,7 +25,7 @@ const LoginPage = () => {
       const response = await axios.post('http://localhost:5000/login', { userID: ID, password: Password });
       if (response.status === 200) {
         alert('Login successful');
-        navigate('/main');
+        navigate('/loggedin');
       }
     } catch (error) {
       if (error.response) {
@@ -40,13 +41,35 @@ const LoginPage = () => {
       }
     }
   };
+  useEffect(() => {
+    const fetchSession = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/session', { withCredentials: true });
+        if (response.status === 200 && response.data.message) {
+          const message = response.data.message;
+          if (message.startsWith('Hello ')) {
+            setIsLoggedIn(true);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching session', error);
+      }
+    };
+    fetchSession();
+  }, []);
+const handleMainPageClick=()=>{
+  if (isLoggedIn)
+    navigate('/loggedin');
+  else
+  navigate('/');
+}
   return (
     <div className="container-center-horizontal">
       <div className="login screen">
         <div className="view">
           <div className="overlap-group">
             <div className="frame-301">
-              <div className="logo"></div>
+              <div className="logo" onClick={handleMainPageClick}></div>
               <div className="sign-in">
                 <div className="frame-300">
                   <h1 className="title valign-text-middle">Sign in</h1>
@@ -82,7 +105,7 @@ const LoginPage = () => {
                 </div>
               </div>
             </div>
-            <img className="rectangle-78" src={rectangle77} alt="Rectangle 78" />
+            <img className="rectangle-78" src={rectangle77} onClick={handleMainPageClick} alt="Rectangle 78" />
           </div>
         </div>
       </div>

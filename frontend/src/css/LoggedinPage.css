@@ -1,0 +1,505 @@
+/* screen - LoggedinPage */
+
+.LoggedinPage {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    min-height: 1536px;
+    width: 1440px;
+  }
+
+  @font-face {
+    font-family: 'GangwonEduPower';
+    src: url('../fonts/GangwonEduPower.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'GangwonEduAll';
+    src: url('../fonts/GangwonEduAll.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  .LoggedinPage .header-nav {
+    align-items: center;
+    background-color: var(--white);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #66666640;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 72px;
+    width: 1440px;
+  }
+  
+  .LoggedinPage .flex-row {
+    align-items: center;
+    display: flex;
+    margin-top: 16px;
+    min-width: 1360px;
+  }
+  
+  .LoggedinPage .rectangle-77 {
+    height: 40px;
+    object-fit: cover;
+    width: 40px;
+  }
+  
+  .LoggedinPage .links {
+    align-items: flex-end;
+    display: inline-flex;
+    gap: 40px;
+    margin-left: 40px;
+    margin-top: 8.0px;
+    position: relative;
+    width: fit-content;
+    display: flex;
+  }
+  
+  .LoggedinPage .place {
+    color: #111111;
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+  }
+  
+  .LoggedinPage .x-list {
+    color: #666666cc;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    cursor:pointer;
+    display: flex;
+    white-space: nowrap;
+  }
+  
+  .LoggedinPage .login-sign-up {
+    align-items: center;
+    display: inline-flex;
+    gap: 16px;
+    justify-content: center;
+    margin-left: 857px;
+    position: relative;
+  }
+  
+  .LoggedinPage .button {
+    border: 1px solid;
+    border-color: #111111;
+    border-radius: 8px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 40px;
+    cursor:pointer;
+  }
+  
+  .LoggedinPage .frame-276 {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    left: 8px;
+    position: relative;
+    top: 8px;
+  }
+  
+  .LoggedinPage .icons {
+    height: 24px;
+    position: relative;
+    width: 24px;
+  }
+  
+  .LoggedinPage .button-1 {
+    background-color: #111111;
+    border: 1px solid;
+    border-radius: 8px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 98px;
+    cursor:pointer;
+  }
+  
+  .LoggedinPage .frame-276-1 {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    left: 20px;
+    position: relative;
+    top: 8px;
+  }
+  
+  .LoggedinPage .sign-up {
+    color: var(--white);
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .LoggedinPage .divider-1 {
+    background-color: #d4d4d4;
+    height: 1px;
+    width: 1440px;
+  }
+  
+  .LoggedinPage .view {
+    align-items: flex-end;
+    background-color: #f3f2f0;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    height: 1024px;
+    padding: 104px 47px;
+    width: 1440px;
+  }
+  
+  .LoggedinPage .flex-row-1 {
+    align-items: center;
+    display: flex;
+    min-width: 1329px;
+  }
+  
+  .LoggedinPage .content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+    margin-top: 18.0px;
+    min-height: 490px;
+    width: 694px;
+  }
+  
+  .LoggedinPage .frame-45 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: -53px;
+    min-height: 188px;
+    padding: 5px 0;
+    width: 681px;
+  }
+  
+  .LoggedinPage .title {
+    color: #000000;
+    font-family: 'GangwonEduPower';
+    font-size: 72px;
+    font-weight: 800;
+    height: 74px;
+    letter-spacing: 0.72px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .LoggedinPage .keep-a-diary {
+    align-self: center;
+    color: #06040a;
+    font-family: 'GangwonEduPower';
+    font-size: 72px;
+    font-weight: 800;
+    height: 74px;
+    letter-spacing: 0.72px;
+    line-height: normal;
+    margin-right: 1.0px;
+    min-width: 448px;
+    white-space: nowrap;
+  }
+  
+  .LoggedinPage .frame-14559 {
+    align-items: flex-start;
+    display: flex;
+    gap: 32px;
+    position: relative;
+    width: 681px;
+  }
+  
+  .LoggedinPage .rectangle-76 {
+    align-self: stretch;
+    background-color: #06040a;
+    position: relative;
+    width: 6px;
+  }
+  
+  .LoggedinPage .frame-14568 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+  }
+  
+  .LoggedinPage .x {
+    color: #06040a;
+    font-family: 'GangwonEduAll';
+    font-size: 27px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin-top: -1.00px;
+    position: relative;
+    width: 632px;
+  }
+  
+  .LoggedinPage .primary-button {
+    align-items: flex-start;
+    background-color: #06040a;
+    border-radius: 40px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    overflow: hidden;
+    padding: 24px 56px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .LoggedinPage .get-started {
+    color: var(--white);
+    font-family: 'GangwonEduPower';
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .LoggedinPage .image-1 {
+    height: 594px;
+    object-fit: cover;
+    width: 635px;
+  }
+  
+  .LoggedinPage .card {
+    align-items: flex-start;
+    align-self: center;
+    display: inline-flex;
+    margin-left: 4.0px;
+    position: relative;
+  }
+  
+  .LoggedinPage .frame-14560 {
+    align-items: flex-start;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 48px 36px;
+    position: relative;
+    width: 654px;
+  }
+  
+  .LoggedinPage .frame-14565 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .LoggedinPage .x-list-1 {
+    color: #06040a;
+    font-family: 'GangwonEduPower';
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    cursor:pointer;
+  }
+
+  .LoggedinPage .welcome-message {
+    font-family: 'Poppins';
+    white-space: nowrap;
+
+  }
+  
+  .LoggedinPage .text_label {
+    color: #06040a;
+    font-family: 'GangwonEduAll';
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 293px;
+  }
+  
+  .LoggedinPage .frame-14561 {
+    align-items: flex-start;
+    background-color: #cbc4b9;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 48px 36px;
+    position: relative;
+    width: 654px;
+  }
+  
+  .LoggedinPage .text_label-1 {
+    color: #06040a;
+    font-family: 'GangwonEduAll';
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 285px;
+  }
+  
+  .LoggedinPage .group-7 {
+    align-items: flex-start;
+    display: flex;
+    min-width: 1440px;
+  }
+  
+  .LoggedinPage .overlap-group {
+    height: 440px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .LoggedinPage .footer {
+    align-items: flex-start;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    height: 440px;
+    justify-content: flex-start;
+    left: 0;
+    padding: 48px 111px;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .LoggedinPage .frame-275 {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .LoggedinPage .divider {
+    background-color: #66666640;
+    height: 1px;
+    position: relative;
+    width: 1218px;
+  }
+  
+  .LoggedinPage .frame-274 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 155px;
+    position: relative;
+  }
+  
+  .LoggedinPage .frame-269 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 64px;
+    position: relative;
+  }
+  
+  .LoggedinPage .frame-268 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+  }
+  
+  .LoggedinPage .product {
+    color: #333333;
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .LoggedinPage .frame-268-item {
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .LoggedinPage .group-6 {
+    height: 24px;
+    position: relative;
+    width: 1131px;
+  }
+  
+  .LoggedinPage .frame-272 {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 56px;
+    position: relative;
+    top: 1px;
+  }
+  
+  .LoggedinPage .copyright-2022 {
+    color: #333333;
+    font-family: var(--font-family-poppins);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .LoggedinPage .image-5 {
+    height: 134px;
+    left: 199px;
+    object-fit: cover;
+    position: absolute;
+    top: 86px;
+    width: 300px;
+  }
+  
