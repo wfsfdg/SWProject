@@ -10,7 +10,24 @@
     padding: 50px 111px;
     width: 1440px;
   }
-  
+  @font-face {
+    font-family: 'GangwonEduPower';
+    src: url('../fonts/GangwonEduPower.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
   .PhotolistPage .flex-col {
     align-items: center;
     align-self: center;
@@ -24,8 +41,8 @@
   
   .PhotolistPage .title {
     color: #06040a;
-    font-family: var(--font-family-gangwonedupower-extrabold);
-    font-size: var(--font-size-l);
+    font-family: 'GangwonEduPower';
+    font-size: 40px;
     font-weight: 800;
     letter-spacing: 0;
     line-height: normal;
@@ -39,7 +56,7 @@
     align-items: center;
     background-color: #ffffff;
     border: 1px solid;
-    border-color: var(--black);
+    border-color: #000000;
     border-radius: 12px;
     display: flex;
     gap: 641px;
@@ -50,9 +67,9 @@
   }
   
   .PhotolistPage .enter-tag {
-    color: var(--mine-shaft);
-    font-family: var(--font-family-lato);
-    font-size: var(--font-size-m);
+    color: #333333cc;
+    font-family: 'Lato';
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 0;
     line-height: normal;
@@ -85,9 +102,9 @@
   
   .PhotolistPage .button {
     align-items: flex-start;
-    background-color: var(--cloud);
+    background-color: #c7c7c7;
     border: 1px solid;
-    border-color: var(--licorice);
+    border-color: #111111;
     border-radius: 20px;
     display: flex;
     height: 200px;
@@ -122,10 +139,11 @@
   }
   
   .PhotolistPage .button-1 {
-    background-color: var(--licorice);
+    background-color: #111111;
     border: 1px solid;
     border-radius: 20px;
     height: 40px;
+    text-align: center;
     overflow: hidden;
     padding: 6.5px 20.5px;
     width: 98px;
@@ -133,8 +151,8 @@
   
   .PhotolistPage .sign-up {
     color: #ffffff;
-    font-family: var(--font-family-poppins);
-    font-size: var(--font-size-s);
+    font-family: 'Poppins';
+    font-size: 16px;
     font-weight: 400;
     height: 24px;
     letter-spacing: 0;

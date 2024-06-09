@@ -1,0 +1,165 @@
+/* screen - PhotoUpload */
+
+.PhotoUpload {
+    align-items: center;
+    background-color: #f3f2f0;
+    display: flex;
+    flex-direction: column;
+    height: 1527px;
+    padding: 187px 0;
+    width: 1440px;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  .PhotoUpload .sign-in-1 {
+    background-color: #FFFFFF;
+    border: 3px solid;
+    border-color: #666666;
+    border-radius: 24px;
+    flex-direction: column;
+    gap: 401px;
+    height: 106px;
+    margin-top: 65px;
+    overflow: hidden;
+    width: 860px;
+  }
+  
+  .PhotoUpload .h1-enter-title {
+    color: #333333cc;
+    font-family: 'Lato';
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 25px;
+    margin-top: 14px;
+    min-height: 72px;
+    white-space: nowrap;
+  }
+  
+  .PhotoUpload .text-3 {
+    align-self: flex-end;
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 120px;
+    width: 842px;
+  }
+  
+  .PhotoUpload .sign-in-container {
+    gap: 16px;
+    margin-right: 4.0px;
+    margin-top: 16px;
+    min-width: 856px;
+  }
+  
+  .PhotoUpload .sign-in {
+    align-items: flex-end;
+    background-color: var(--white);
+    border: 3px solid;
+    border-color:  #666666;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 443px;
+    height: 64px;
+    overflow: hidden;
+    width: 420px;
+  }
+  
+  .PhotoUpload .enter-tag-tag {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: -447px;
+    margin-top: 14px;
+    min-height: 30px;
+    width: 842px;
+  }
+  
+  .PhotoUpload .text {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: -440px;
+    min-height: 120px;
+    width: 842px;
+  }
+  
+  .PhotoUpload .select-attachment {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-right: -447px;
+    margin-top: 14px;
+    min-height: 30px;
+    width: 842px;
+  }
+  
+  .PhotoUpload .group-12 {
+    align-items: flex-start;
+    display: flex;
+    margin-right: 4.0px;
+    margin-top: 16px;
+    min-width: 856px;
+  }
+  
+  .PhotoUpload .sign-in-2 {
+    background-color: #FFFFFF;
+    border: 3px solid;
+    border-color:  #666666;
+    border-radius: 24px;
+    height: 822px;
+    overflow: hidden;
+    padding: 14px 25px;
+    width: 856px;
+  }
+  
+  .PhotoUpload .enter-text {
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 30px;
+    width: 796px;
+  }
+  
+  .PhotoUpload .button {
+    align-items: flex-start;
+    align-self: flex-end;
+    background-color: var(--black);
+    border: 1px solid;
+    border-color: #111111;
+    border-radius: 8px;
+    display: flex;
+    height: 40px;
+    margin-right: 294px;
+    margin-top: 24px;
+    overflow: hidden;
+    padding: 6.5px 32px;
+    width: 98px;
+    margin-bottom: 24px;
+  }
+  
+  .PhotoUpload .sign-up {
+    color: var(--white);
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    height: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    min-width: 34px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .PhotoUpload .sign-in-3 {
+    align-items: flex-start;
+    display: flex;
+  }
+  

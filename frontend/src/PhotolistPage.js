@@ -1,8 +1,17 @@
-import React from 'react';
+
 import './css/PhotolistPage.css'; // PhotolistPage.css 파일을 import합니다.
 import image7 from './img/image-7.png';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const PhotolistPage = () => {
+    const navigate = useNavigate();
+    const handlePhotoUploadClick=()=>{
+        navigate('/photoupload');
+      };
+    
+
   return (
     <div className="container-center-horizontal">
       <div className="PhotolistPage screen">
@@ -20,7 +29,7 @@ const PhotolistPage = () => {
             <div className="button"><div className="pohto valign-text-middle poppins-normal-black-16px">사진 첨부</div></div>
           </div>
           <div className="flex-col-1">
-            <div className="button-1 button-2"><div className="sign-up valign-text-middle">Writing</div></div>
+            <div className="button-1 button-2" onClick={handlePhotoUploadClick}><div className="sign-up valign-text-middle">Writing</div></div>
             <div className="text-2 text-1 lato-semi-bold-mine-shaft-40px">제목</div>
             <p className="text lato-normal-mine-shaft-22px">
               본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문 본문
