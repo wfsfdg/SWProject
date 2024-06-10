@@ -147,6 +147,7 @@
     overflow: hidden;
     padding: 6.5px 20.5px;
     width: 98px;
+    cursor: pointer;
   }
   
   .PhotolistPage .sign-up {
@@ -186,6 +187,7 @@
     align-items: flex-start;
     align-self: flex-end;
     display: flex;
+    cursor: pointer;
   }
   
   .PhotolistPage .text-1 {

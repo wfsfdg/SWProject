@@ -45,6 +45,7 @@
     margin-top: 14px;
     min-height: 72px;
     white-space: nowrap;
+    border: none;
   }
   
   .PhotoUpload .text-3 {
@@ -60,6 +61,7 @@
     margin-right: 4.0px;
     margin-top: 16px;
     min-width: 856px;
+    border: none;
   }
   
   .PhotoUpload .sign-in {
@@ -80,9 +82,12 @@
     letter-spacing: 0;
     line-height: normal;
     margin-right: -447px;
+    font-family: 'Lato';
+    font-size: 25px;
     margin-top: 14px;
     min-height: 30px;
     width: 842px;
+    border:none;
   }
   
   .PhotoUpload .text {
@@ -126,6 +131,10 @@
     line-height: normal;
     min-height: 30px;
     width: 796px;
+    border: none;
+    font-family: 'Lato';
+    font-size: 25px;
+    height: fit-content;
   }
   
   .PhotoUpload .button {
