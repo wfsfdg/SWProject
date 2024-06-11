@@ -160,7 +160,13 @@ def allowed_file(filename):
 def get_posts():
     limit = int(request.args.get('limit', 10))
     offset = int(request.args.get('offset', 0))
-    posts = mongo_postdata.db.posts.find().skip(offset).limit(limit)
+    tag = request.args.get('tag', None)
+
+    query = {}
+    if tag:
+        query['tag'] = {'$regex': tag, '$options': 'i'}  # 태그에 검색어가 포함되는지 확인
+
+    posts = mongo_postdata.db.posts.find(query).skip(offset).limit(limit)
     result = []
     for post in posts:
         post['_id'] = str(post['_id'])

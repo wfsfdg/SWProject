@@ -18,30 +18,52 @@ const PhotolistPage = () => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
+
   useEffect(() => {
-    const fetchPosts = async (page) => {
-      setLoading(true);
+    const fetchSession = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/posts', {
-          params: { limit: 10, offset: (page - 1) * 10 }
-        });
-        if (response.data.length > 0) {
-          setPosts(prevPosts => {
-            const newPosts = response.data.filter(post => !prevPosts.some(p => p._id === post._id));
-            return [...prevPosts, ...newPosts];
-          });
-        } else {
-          setHasMore(false);
+        const response = await axios.get('http://localhost:5000/session', { withCredentials: true });
+        if (response.status === 200 && response.data.message) {
+          const message = response.data.message;
+          if (message.startsWith('Hello ')) {
+            const user = message.replace('Hello ', '').trim();
+            setUsername(user);
+            setIsLoggedIn(true);
+          }
         }
-        setLoading(false);
       } catch (error) {
-        console.error('Error fetching posts:', error);
-        setLoading(false);
+        console.error('Error fetching session', error);
       }
     };
-  
+    fetchSession();
+  }, []);
+
+  // useEffect 훅 수정
+  useEffect(() => {
     fetchPosts(page);
-  }, [page]);
+  }, [page, searchTerm]);
+
+  // fetchPosts 함수 수정
+  const fetchPosts = async (page) => {
+    setLoading(true);
+    try {
+      const response = await axios.get('http://localhost:5000/api/posts', {
+        params: { limit: 10, offset: (page - 1) * 10, tag: searchTerm }
+      });
+      if (response.data.length > 0) {
+        setPosts(prevPosts => {
+          const newPosts = response.data.filter(post => !prevPosts.some(p => p._id === post._id));
+          return [...prevPosts, ...newPosts];
+        });
+      } else {
+        setHasMore(false);
+      }
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+      setLoading(false);
+    }
+  };
 
   const handleScroll = () => {
     if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight || loading) return;
@@ -61,6 +83,9 @@ const PhotolistPage = () => {
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
+    setPage(1); // 페이지를 1로 리셋
+    setPosts([]); // 포스트를 초기화
+    setHasMore(true); // hasMore를 true로 설정
   };
 
   const handleUserlistClick = () => {
@@ -136,24 +161,21 @@ const PhotolistPage = () => {
               <div className="sign-up-1 valign-text-middle">Writing</div>
             </div>
             <div className="flex-col-1">
-  {posts.map(post => (
-    <div key={post._id} className="post-item"  onClick={() => handlePostClick(post._id)}>
-      <img src={`http://localhost:5000/uploads/${post.files[0]}`} alt="Post" className="fixed-size-image" />
-      <div className="post-content">
-        <div>
-          <h2 className="post-title">{post.title}</h2>
-          <div className="post-tag">{post.tag}</div>
-        </div>
-        <p className="post-description">{post.description}</p>
-      </div>
-    </div>
-  ))}
-  {loading && <p>Loading...</p>}
-</div>
-
+              {posts.map(post => (
+                <div key={post._id} className="post-item" onClick={() => handlePostClick(post._id)}>
+                  <img src={`http://localhost:5000/uploads/${post.files[0]}`} alt="Post" className="fixed-size-image" />
+                  <div className="post-content">
+                    <div>
+                      <h2 className="post-title">{post.title}</h2>
+                      <div className="post-tag">{post.tag}</div>
+                    </div>
+                    <p className="post-description">{post.description}</p>
+                  </div>
+                </div>
+              ))}
+              {loading && <p>Loading...</p>}
+            </div>
           </div>
-
-
         </div>
         <div className="group-10">
           <div className="overlap-group overlap">
