@@ -1,174 +1,429 @@
 /* screen - PhotoUpload */
 
 .PhotoUpload {
-    align-items: center;
-    background-color: #f3f2f0;
-    display: flex;
-    flex-direction: column;
-    height: 1527px;
-    padding: 187px 0;
-    width: 1440px;
-  }
-  @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Light.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Lato';
-    src: url('../fonts/Lato-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  .PhotoUpload .sign-in-1 {
-    background-color: #FFFFFF;
-    border: 3px solid;
-    border-color: #666666;
-    border-radius: 24px;
-    flex-direction: column;
-    gap: 401px;
-    height: 106px;
-    margin-top: 65px;
-    overflow: hidden;
-    width: 860px;
-  }
-  
-  .PhotoUpload .h1-enter-title {
-    color: #333333cc;
-    font-family: 'Lato';
-    font-size: 60px;
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-left: 25px;
-    margin-top: 14px;
-    min-height: 72px;
-    white-space: nowrap;
-    border: none;
-  }
-  
-  .PhotoUpload .text-3 {
-    align-self: flex-end;
-    letter-spacing: 0;
-    line-height: normal;
-    min-height: 120px;
-    width: 842px;
-  }
-  
-  .PhotoUpload .sign-in-container {
-    gap: 16px;
-    margin-right: 4.0px;
-    margin-top: 16px;
-    min-width: 856px;
-    border: none;
-  }
-  
-  .PhotoUpload .sign-in {
-    align-items: flex-end;
-    background-color: var(--white);
-    border: 3px solid;
-    border-color:  #666666;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 443px;
-    height: 64px;
-    overflow: hidden;
-    width: 420px;
-  }
-  
-  .PhotoUpload .enter-tag-tag {
-    letter-spacing: 0;
-    line-height: normal;
-    margin-right: -447px;
-    font-family: 'Lato';
-    font-size: 25px;
-    margin-top: 14px;
-    min-height: 30px;
-    width: 842px;
-    border:none;
-  }
-  
-  .PhotoUpload .text {
-    letter-spacing: 0;
-    line-height: normal;
-    margin-right: -440px;
-    min-height: 120px;
-    width: 842px;
-  }
-  
-  .PhotoUpload .select-attachment {
-    letter-spacing: 0;
-    line-height: normal;
-    margin-right: -447px;
-    margin-top: 14px;
-    min-height: 30px;
-    width: 842px;
-  }
-  
-  .PhotoUpload .group-12 {
-    align-items: flex-start;
-    display: flex;
-    margin-right: 4.0px;
-    margin-top: 16px;
-    min-width: 856px;
-  }
-  
-  .PhotoUpload .sign-in-2 {
-    background-color: #FFFFFF;
-    border: 3px solid;
-    border-color:  #666666;
-    border-radius: 24px;
-    height: 822px;
-    overflow: hidden;
-    padding: 14px 25px;
-    width: 856px;
-  }
-  
-  .PhotoUpload .enter-text {
-    letter-spacing: 0;
-    line-height: normal;
-    min-height: 30px;
-    width: 796px;
-    border: none;
-    font-family: 'Lato';
-    font-size: 25px;
-    height: fit-content;
-  }
-  
-  .PhotoUpload .button {
-    align-items: flex-start;
-    align-self: flex-end;
-    background-color: var(--black);
-    border: 1px solid;
-    border-color: #111111;
-    border-radius: 8px;
-    display: flex;
-    height: 40px;
-    margin-right: 294px;
-    margin-top: 24px;
-    overflow: hidden;
-    padding: 6.5px 32px;
-    width: 98px;
-    margin-bottom: 24px;
-  }
-  
-  .PhotoUpload .sign-up {
-    color: var(--white);
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 400;
-    height: 24px;
-    letter-spacing: 0;
-    line-height: normal;
-    min-width: 34px;
-    position: relative;
-    text-align: center;
-  }
-  
-  .PhotoUpload .sign-in-3 {
-    align-items: flex-start;
-    display: flex;
-  }
-  
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 2039px;
+  width: 1440px;
+}
+@font-face {
+  font-family: 'GangwonEduPower';
+  src: url('../fonts/GangwonEduPower.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GangwonEduAll';
+  src: url('../fonts/GangwonEduAll.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.PhotoUpload .header-nav {
+  align-items: center;
+  background-color: #FFFFFF;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #66666640;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 72px;
+  width: 1440px;
+}
+
+.PhotoUpload .flex-row {
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+  min-width: 1360px;
+}
+
+.PhotoUpload .rectangle-77 {
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.PhotoUpload .links {
+  align-items: flex-end;
+  display: inline-flex;
+  gap: 40px;
+  margin-left: 40px;
+  margin-top: 8.0px;
+  position: relative;
+}
+
+.PhotoUpload .place {
+  color: #111111;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.PhotoUpload .x-list {
+  color: #666666cc;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.PhotoUpload .login-sign-up {
+  align-items: center;
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+  margin-left: 857px;
+  position: relative;
+}
+
+.PhotoUpload .button {
+  border: 1px solid;
+  border-color: #111111;
+  border-radius: 8px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  width: 40px;
+}
+
+.PhotoUpload .frame-276 {
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  left: 8px;
+  top: 8px;
+}
+
+.PhotoUpload .icons {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.PhotoUpload .button-1 {
+  background-color: #111111;
+  position: relative;
+}
+
+.PhotoUpload .frame-276-1 {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  left: 20px;
+  position: relative;
+  top: 8px;
+}
+
+.PhotoUpload .sign-up {
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.PhotoUpload .divider-1 {
+  background-color: #d4d4d4;
+  height: 1px;
+  width: 1440px;
+}
+
+.PhotoUpload .view {
+  align-items: center;
+  background-color: #f3f2f0;
+  display: flex;
+  flex-direction: column;
+  height: 1527px;
+  padding: 187px 0;
+  width: 1440px;
+}
+
+.PhotoUpload .sign-in-1 {
+  background-color: #FFFFFF;
+  border: 3px solid;
+  border-color: #666666;
+  border-radius: 24px;
+  flex-direction: column;
+  gap: 401px;
+  height: 106px;
+  margin-top: 65px;
+  overflow: hidden;
+  width: 860px;
+}
+
+.PhotoUpload .h1-enter-title {
+  color: #333333cc;
+  font-family: 'Lato';
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 25px;
+  margin-top: 14px;
+  min-height: 72px;
+  white-space: nowrap;
+  border : none;
+}
+
+.PhotoUpload .text-3 {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 120px;
+  width: 842px;
+}
+
+.PhotoUpload .sign-in-container {
+  gap: 16px;
+  margin-right: 4.0px;
+  margin-top: 16px;
+  min-width: 856px;
+}
+
+.PhotoUpload .sign-in {
+  align-items: flex-end;
+  background-color: #FFFFFF;
+  border: 3px solid;
+  border-color: #666666;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 443px;
+  height: 64px;
+  overflow: hidden;
+  width: 420px;
+}
+
+.PhotoUpload .enter-tag-tag {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: -447px;
+  margin-top: 14px;
+  min-height: 30px;
+  width: 842px;
+  border : none;
+}
+
+.PhotoUpload .text {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: -440px;
+  min-height: 120px;
+  width: 842px;
+}
+
+.PhotoUpload .select-attachment {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: -447px;
+  margin-top: 14px;
+  min-height: 30px;
+  width: 842px;
+}
+
+.PhotoUpload .sign-in-2 {
+  background-color: #FFFFFF;
+  border: 3px solid;
+  border-color: #666666;
+  border-radius: 24px;
+  height: 822px;
+  margin-right: 4.0px;
+  margin-top: 16px;
+  overflow: hidden;
+  padding: 14px 25px;
+  width: 856px;
+}
+
+.PhotoUpload .enter-text {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 30px;
+  width: 796px;
+  border : none;
+}
+
+.PhotoUpload .button-2 {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: #000000;
+  border-color: #111111;
+  display: flex;
+  margin-right: 294px;
+  margin-top: 24px;
+  padding: 6.5px 32px;
+}
+
+.PhotoUpload .sign-up-1 {
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  min-width: 34px;
+  position: relative;
+  text-align: center;
+}
+
+.PhotoUpload .group-11 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 1440px;
+}
+
+.PhotoUpload .overlap-group {
+  height: 440px;
+  position: relative;
+  width: 1440px;
+}
+
+.PhotoUpload .footer {
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  height: 440px;
+  justify-content: flex-start;
+  left: 0;
+  padding: 48px 111px;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.PhotoUpload .frame-275 {
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+}
+
+.PhotoUpload .divider {
+  background-color: #66666640;
+  height: 1px;
+  position: relative;
+  width: 1218px;
+}
+
+.PhotoUpload .frame-274 {
+  align-items: flex-start;
+  flex: 0 0 auto;
+  gap: 155px;
+}
+
+.PhotoUpload .frame-269 {
+  align-items: flex-start;
+  flex: 0 0 auto;
+  gap: 64px;
+}
+
+.PhotoUpload .frame-268 {
+  align-items: flex-start;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.PhotoUpload .product {
+  color: #333333;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.PhotoUpload .frame-268-item {
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.PhotoUpload .group-6 {
+  height: 24px;
+  position: relative;
+  width: 1131px;
+}
+
+.PhotoUpload .frame-272 {
+  align-items: flex-start;
+  gap: 56px;
+  top: 1px;
+}
+
+.PhotoUpload .copyright-2022 {
+  color: #333333;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.PhotoUpload .image-4 {
+  height: 134px;
+  left: 199px;
+  object-fit: cover;
+  position: absolute;
+  top: 86px;
+  width: 300px;
+}
+
+.PhotoUpload .button-3 {
+  border: 1px solid;
+  border-radius: 8px;
+  height: 40px;
+  overflow: hidden;
+  width: 98px;
+}
+
+.PhotoUpload .frame {
+  display: inline-flex;
+  position: relative;
+}
+
+.PhotoUpload .sign-in-3 {
+  align-items: flex-start;
+  display: flex;
+}
