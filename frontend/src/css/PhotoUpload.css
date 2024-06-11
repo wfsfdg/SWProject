@@ -80,6 +80,7 @@
   margin-top: -1.00px;
   position: relative;
   width: fit-content;
+  cursor: pointer;
 }
 
 .PhotoUpload .x-list {
@@ -92,6 +93,7 @@
   margin-top: -1.00px;
   position: relative;
   width: fit-content;
+  cursor: pointer;
 }
 
 .PhotoUpload .login-sign-up {
@@ -130,6 +132,7 @@
 .PhotoUpload .button-1 {
   background-color: #111111;
   position: relative;
+  cursor: pointer;
 }
 
 .PhotoUpload .frame-276-1 {
@@ -284,6 +287,7 @@
   margin-right: 294px;
   margin-top: 24px;
   padding: 6.5px 32px;
+  cursor: pointer;
 }
 
 .PhotoUpload .sign-up-1 {

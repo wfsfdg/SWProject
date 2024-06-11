@@ -67,8 +67,10 @@ const PhotoUpload = () => {
         }
       });
       console.log('Server Response:', response.data);
+      alert('Upload successful!');
     } catch (error) {
       console.error('Error uploading:', error);
+      alert('Upload failed. Please try again.');
     }
   };
 
@@ -91,9 +93,9 @@ const PhotoUpload = () => {
           <div class="flex-row">
             <img class="rectangle-77" src={rectangle77} alt="Rectangle 77" />
             <div class="links">
-              <div class="place">Home</div>
-              <div class="x-list">User List</div>
-              <div class="x-list">Photo List</div>
+              <div class="place" onClick={handleMainPageClick}>Home</div>
+              <div class="x-list" onClick={handleUserlistClick}>User List</div>
+              <div class="x-list" onClick={handlePhotolistClick}>Photo List</div>
             </div>
             <div class="login-sign-up">
               <article class="button">
@@ -144,7 +146,7 @@ const PhotoUpload = () => {
                             rows="50"  // 텍스트 영역의 높이를 조정합니다.
               />
             </div>
-          <div class="button-2 button-3"><div class="sign-up-1 valign-text-middle">Post</div></div>
+          <div class="button-2 button-3" onClick={handleSubmit}><div class="sign-up-1 valign-text-middle">Post</div></div>
         </div>
         <div class="group-11">
           <div class="overlap-group">

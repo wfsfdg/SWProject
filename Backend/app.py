@@ -1,10 +1,15 @@
 from flask import Flask, request, jsonify, session
 from flask_cors import CORS
 import sqlite3
+from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 app.secret_key = 'secret_key'
 CORS(app, supports_credentials=True, origins=["http://localhost:3000"])  # 클라이언트 주소 추가
+
+app.config["MONGO_URI_POSTDATA"] = "mongodb://localhost:27017/postdata"
+mongo_postdata = PyMongo(app, uri="mongodb://localhost:27017/postdata")
+
 
 DATABASE = 'users.db'
 current_username = None  # 초기값을 None으로 설정
@@ -98,6 +103,27 @@ def get_session():
     else:
         username = current_username
         return jsonify({'message': f'Hello {username}'}), 200
+    
+@app.route('/upload', methods=['POST'])
+def upload_post():
+    data = request.form
+    files = request.files.getlist('files')
+
+    new_post = {
+        'username': data.get('username'),
+        'title': data.get('title'),
+        'tag': data.get('tag'),
+        'description': data.get('description'),
+        'files': [file.filename for file in files]
+    }
+
+    # 파일 저장
+    for file in files:
+        file.save(os.path.join('uploads', file.filename))
+
+    # DB에 저장 (postdata 데이터베이스)
+    mongo_postdata.db.posts.insert_one(new_post)
+    return {'message': 'Post uploaded successfully!'}, 200
 
 if __name__ == '__main__':
     app.run(debug=True, host='localhost', port=5000)
