@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './css/PhotoUpload.css';
 import './css/styleguide.css';
 import './css/globals.css';
@@ -34,7 +34,14 @@ const PhotoUpload = () => {
     };
     fetchSession();
   }, []);
+  const handlePostClick = (postId) => {
+    localStorage.setItem('postId', postId);
+    navigate('/postView');
+  };
   
+  const handleFileChange = (e) => {
+    setAttachment(Array.from(e.target.files));
+  };
   const handlePhotolistClick=()=>{
     navigate('/photolist');
   };
@@ -51,12 +58,17 @@ const PhotoUpload = () => {
     navigate('/photoupload')
   }
   const handleSubmit = async () => {
+    if (!title || !tag || !description ) {
+      alert('There are fields that have not been entered');
+      return;
+    }
+  
     const formData = new FormData();
     formData.append('username', username);
     formData.append('title', title);
     formData.append('tag', tag);
     formData.append('description', description);
-    attachment.forEach(file => {
+    Array.from(attachment).forEach(file => {
       formData.append('files', file);
     });
   
@@ -67,13 +79,16 @@ const PhotoUpload = () => {
         }
       });
       console.log('Server Response:', response.data);
+      const postId = response.data.post_id;
+      localStorage.setItem('postId', postId); 
       alert('Upload successful!');
+      navigate('/photoview');
     } catch (error) {
       console.error('Error uploading:', error);
       alert('Upload failed. Please try again.');
     }
   };
-
+  
   const handleLogout = async () => {
     try {
       const response = await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
@@ -133,7 +148,7 @@ const PhotoUpload = () => {
               <div class="select-attachment">Select attachment
               <input
                   type="file"
-                  onChange={(e) => ([...attachment, ...Array.from(e.target.files)])}
+                  onChange={handleFileChange}
                 /></div>
             </div>
           </div>
@@ -146,7 +161,7 @@ const PhotoUpload = () => {
                             rows="50"  // 텍스트 영역의 높이를 조정합니다.
               />
             </div>
-          <div class="button-2 button-3" onClick={handleSubmit}><div class="sign-up-1 valign-text-middle">Post</div></div>
+          <div class="button-2" onClick={handleSubmit}><div class="sign-up-1 valign-text-middle">Post</div></div>
         </div>
         <div class="group-11">
           <div class="overlap-group">

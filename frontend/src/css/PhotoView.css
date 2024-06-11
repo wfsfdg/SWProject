@@ -1,419 +1,430 @@
 /* screen - PhotoView */
 
 .PhotoView {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    min-height: 2039px;
-    width: 1440px;
-  }
-  
-  @font-face {
-    font-family: 'GangwonEduPower';
-    src: url('../fonts/GangwonEduPower.otf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'GangwonEduAll';
-    src: url('../fonts/GangwonEduAll.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/Poppins-Light.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Lato';
-    src: url('../fonts/Lato-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .PhotoView .header-nav {
-    align-items: center;
-    background-color: #FFFFFF;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-color: #66666640;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    height: 72px;
-    width: 1440px;
-  }
-  
-  .PhotoView .flex-row {
-    align-items: center;
-    display: flex;
-    margin-top: 16px;
-    min-width: 1360px;
-  }
-  
-  .PhotoView .rectangle-77 {
-    height: 40px;
-    object-fit: cover;
-    width: 40px;
-  }
-  
-  .PhotoView .links {
-    align-items: flex-end;
-    display: inline-flex;
-    gap: 40px;
-    margin-left: 40px;
-    margin-top: 8.0px;
-    position: relative;
-  }
-  
-  .PhotoView .place {
-    color: #111111;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1.00px;
-    position: relative;
-    width: fit-content;
-    cursor: pointer;
-  }
-  
-  .PhotoView .x-list {
-    color: #666666cc;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1.00px;
-    position: relative;
-    width: fit-content;
-  }
-  
-  .PhotoView .login-sign-up {
-    align-items: center;
-    display: inline-flex;
-    gap: 16px;
-    justify-content: center;
-    margin-left: 857px;
-    position: relative;
-  }
-  
-  .PhotoView .button {
-    border: 1px solid;
-    border-color: #111111;
-    border-radius: 8px;
-    height: 40px;
-    overflow: hidden;
-    position: relative;
-    width: 40px;
-    align-content: center;
-  }
-  
-  .PhotoView .frame-276 {
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-    left: 8px;
-    top: 8px;
-  }
-  
-  .PhotoView .icons {
-    height: 24px;
-    position: relative;
-    width: 24px;
-  }
-  
-  .PhotoView .button-1 {
-    background-color: #111111;
-    border-radius: 8px;
-    height: 40px;
-    position: relative;
-    width: 98px;
-  }
-  
-  .PhotoView .frame-276-1 {
-    align-items: center;
-    display: inline-flex;
-    gap: 8px;
-    justify-content: center;
-    left: 20px;
-    position: relative;
-    top: 8px;
-  }
-  
-  .PhotoView .sign-up {
-    color: #FFFFFF;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1.00px;
-    position: relative;
-    text-align: center;
-    width: fit-content;
-  }
-  
-  .PhotoView .divider-1 {
-    background-color: #d4d4d4;
-    height: 1px;
-    width: 1440px;
-  }
-  
-  .PhotoView .view {
-    align-items: center;
-    background-color: #f3f2f0;
-    display: flex;
-    flex-direction: column;
-    height: 1527px;
-    padding: 80px 278px;
-    width: 1440px;
-  }
-  
-  .PhotoView .h1 {
-    color: #333333cc;
-    font-family: 'Lato';
-    font-size: 60px;
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-right: 1.0px;
-    min-height: 72px;
-    min-width: 305px;
-    white-space: nowrap;
-  }
-  
-  .PhotoView .overlap-group {
-    align-self: flex-end;
-    height: 40px;
-    margin-top: 50px;
-    position: relative;
-    width: 842px;
-  }
-  
-  .PhotoView .text-2 {
-    color: #333333cc;
-    font-family: 'Lato';
-    font-size: 25px;
-    left: 0;
-    position: absolute;
-    top: 4px;
-    width: 842px;
-  }
-  
-  .PhotoView .button-2 {
-    align-items: flex-start;
-    border-color: #111111;
-    border-radius: 8px;
-    display: flex;
-    height: 40px;
-    left: 702px;
-    padding: 6.5px 14px;
-    position: absolute;
-    top: 0;
-    width: 98px;
-  }
-  
-  .PhotoView .sign-up-1 {
-    color: #111111;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 400;
-    height: 24px;
-    letter-spacing: 0;
-    line-height: normal;
-    min-width: 70px;
-    position: relative;
-    text-align: center;
-  }
-  
-  .PhotoView .button-3 {
-    align-items: flex-start;
-    background-color: #796e62;
-    border-color: #111111;
-    border-radius: 20px;
-    display: flex;
-    height: 40px;
-    left: 88px;
-    padding: 6.5px 34px;
-    position: absolute;
-    top: 0;
-    width: 98px;
-  }
-  
-  .PhotoView .text-3 {
-    color: #FFFFFF;
-    font-family: 'Poppins';
-    font-size: 16px;
-    height: 24px;
-    min-width: 30px;
-    position: relative;
-    text-align: center;
-  }
-  
-  .PhotoView .button-4 {
-    align-items: flex-start;
-    background-color: #c7c7c7;
-    border-color: #111111;
-    border-radius: 20px;
-    display: flex;
-    height: 800px;
-    margin-top: 22px;
-    padding: 386.5px 368px;
-    width: 800px;
-  }
-  
-  .PhotoView .pohto {
-    color: #000000;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 400;
-    height: 24px;
-    letter-spacing: 0;
-    line-height: normal;
-    min-width: 64px;
-    text-align: center;
-  }
-  
-  .PhotoView .text-1 {
-    color: #333333cc;
-    font-family: 'Lato';
-    font-size: 25px;
-    margin-top: 48px;
-    min-height: 120px;
-    width: 842px;
-  }
-  
-  .PhotoView .group-9 {
-    align-items: flex-start;
-    display: flex;
-    min-width: 1440px;
-  }
-  
-  .PhotoView .overlap-group1 {
-    height: 440px;
-    position: relative;
-    width: 1440px;
-  }
-  
-  .PhotoView .footer {
-    align-items: flex-start;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    height: 440px;
-    justify-content: flex-start;
-    left: 0;
-    padding: 48px 111px;
-    position: absolute;
-    top: 0;
-    width: 1440px;
-  }
-  
-  .PhotoView .frame-275 {
-    align-items: center;
-    flex-direction: column;
-    gap: 40px;
-    justify-content: center;
-  }
-  
-  .PhotoView .divider {
-    background-color: #66666640;
-    height: 1px;
-    position: relative;
-    width: 1218px;
-  }
-  
-  .PhotoView .frame-274 {
-    align-items: flex-start;
-    flex: 0 0 auto;
-    gap: 155px;
-  }
-  
-  .PhotoView .frame-269 {
-    align-items: flex-start;
-    flex: 0 0 auto;
-    gap: 64px;
-  }
-  
-  .PhotoView .frame-268 {
-    align-items: flex-start;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .PhotoView .product {
-    color: #333333;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1.00px;
-    position: relative;
-    width: fit-content;
-  }
-  
-  .PhotoView .frame-268-item {
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-    width: fit-content;
-  }
-  
-  .PhotoView .group-6 {
-    height: 24px;
-    position: relative;
-    width: 1131px;
-  }
-  
-  .PhotoView .frame-272 {
-    align-items: flex-start;
-    gap: 56px;
-    top: 1px;
-  }
-  
-  .PhotoView .copyright-2022 {
-    color: #333333;
-    font-family: 'Poppins';
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1.00px;
-    position: relative;
-    width: fit-content;
-  }
-  
-  .PhotoView .image-4 {
-    height: 134px;
-    left: 199px;
-    object-fit: cover;
-    position: absolute;
-    top: 86px;
-    width: 300px;
-  }
-  
-  .PhotoView .button-5 {
-    border: 1px solid;
-    overflow: hidden;
-  }
-  
-  .PhotoView .frame {
-    display: inline-flex;
-    position: relative;
-  }
-  
-  .PhotoView .text {
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 2039px;
+  width: 1440px;
+}
+
+@font-face {
+  font-family: 'GangwonEduPower';
+  src: url('../fonts/GangwonEduPower.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GangwonEduAll';
+  src: url('../fonts/GangwonEduAll.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.PhotoView .header-nav {
+  align-items: center;
+  background-color: #FFFFFF;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #66666640;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 72px;
+  width: 1440px;
+}
+
+.PhotoView .flex-row {
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+  min-width: 1360px;
+}
+
+.PhotoView .rectangle-77 {
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.PhotoView .links {
+  align-items: flex-end;
+  display: inline-flex;
+  gap: 40px;
+  margin-left: 40px;
+  margin-top: 8.0px;
+  position: relative;
+}
+
+.PhotoView .place {
+  color: #111111;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.PhotoView .x-list {
+  color: #666666cc;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+  cursor:pointer;
+}
+
+.PhotoView .login-sign-up {
+  align-items: center;
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+  margin-left: 857px;
+  position: relative;
+}
+
+.PhotoView .button {
+  border: 1px solid;
+  border-color: #111111;
+  border-radius: 8px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  width: 40px;
+  align-content: center;
+}
+
+.PhotoView .frame-276 {
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  left: 8px;
+  top: 8px;
+}
+
+.PhotoView .icons {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.PhotoView .button-1 {
+  background-color: #111111;
+  border-radius: 8px;
+  height: 40px;
+  position: relative;
+  width: 98px;
+}
+
+.PhotoView .frame-276-1 {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  left: 20px;
+  position: relative;
+  top: 8px;
+}
+
+.PhotoView .sign-up {
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.PhotoView .divider-1 {
+  background-color: #d4d4d4;
+  height: 1px;
+  width: 1440px;
+}
+
+.PhotoView .view {
+  align-items: center;
+  background-color: #f3f2f0;
+  display: flex;
+  flex-direction: column;
+  height: 1527px;
+  padding: 80px 278px;
+  width: 1440px;
+}
+
+.PhotoView .h1 {
+  color: #333333cc;
+  font-family: 'Lato';
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: 1.0px;
+  min-height: 72px;
+  min-width: 305px;
+  white-space: nowrap;
+}
+
+.PhotoView .overlap-group {
+  align-self: flex-end;
+  height: 40px;
+  margin-top: 50px;
+  position: relative;
+  width: 842px;
+}
+
+.PhotoView .text-2 {
+  color: #333333cc;
+  font-family: 'Lato';
+  font-size: 25px;
+  left: 0;
+  position: absolute;
+  top: 4px;
+  width: 842px;
+}
+
+.PhotoView .button-2 {
+  align-items: flex-start;
+  border-color: #111111;
+  border-radius: 8px;
+  display: flex;
+  height: 40px;
+  left: 702px;
+  padding: 6.5px 14px;
+  position: absolute;
+  top: 0;
+  width: 98px;
+}
+
+.PhotoView .sign-up-1 {
+  color: #111111;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  min-width: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.PhotoView .button-3 {
+  align-items: center !important;
+  text-align: center;
+  background-color: #796e62;
+  border-color: #111111;
+  border-radius: 20px;
+  display: flex;
+  height: 40px;
+  left: 88px;
+  padding: 6.5px 34px;
+  position: absolute;
+  top: 0;
+  width: 98px;
+  border: 1px solid;
+  overflow: hidden;
+  color : #FFFFFF;
+}
+
+.PhotoView .text-3 {
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-size: 16px;
+  height: 24px;
+  min-width: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.PhotoView .button-4 {
+  align-items: flex-start;
+  background-color: #c7c7c7;
+  border-color: #111111;
+  border-radius: 20px;
+  display: flex;
+  height: 800px;
+  margin-top: 22px;
+  padding: 386.5px 368px;
+  width: 800px;
+}
+
+.PhotoView .pohto {
+  color: #000000;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  min-width: 64px;
+  text-align: center;
+}
+
+.PhotoView .text-1 {
+  color: #333333cc;
+  font-family: 'Lato';
+  font-size: 25px;
+  margin-top: 48px;
+  min-height: 120px;
+  width: 842px;
+}
+
+.PhotoView .group-9 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 1440px;
+}
+
+.PhotoView .overlap-group1 {
+  height: 440px;
+  position: relative;
+  width: 1440px;
+}
+
+.PhotoView .footer {
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  height: 440px;
+  justify-content: flex-start;
+  left: 0;
+  padding: 48px 111px;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.PhotoView .frame-275 {
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+}
+
+.PhotoView .divider {
+  background-color: #66666640;
+  height: 1px;
+  position: relative;
+  width: 1218px;
+}
+
+.PhotoView .frame-274 {
+  align-items: flex-start;
+  flex: 0 0 auto;
+  gap: 155px;
+}
+
+.PhotoView .frame-269 {
+  align-items: flex-start;
+  flex: 0 0 auto;
+  gap: 64px;
+}
+
+.PhotoView .frame-268 {
+  align-items: flex-start;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.PhotoView .product {
+  color: #333333;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.PhotoView .frame-268-item {
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.PhotoView .group-6 {
+  height: 24px;
+  position: relative;
+  width: 1131px;
+}
+
+.PhotoView .frame-272 {
+  align-items: flex-start;
+  gap: 56px;
+  top: 1px;
+}
+
+.PhotoView .copyright-2022 {
+  color: #333333;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.PhotoView .image-4 {
+  height: 134px;
+  left: 199px;
+  object-fit: cover;
+  position: absolute;
+  top: 86px;
+  width: 300px;
+}
+
+.PhotoView .button-5 {
+  border: 1px solid;
+  overflow: hidden;
+}
+
+.PhotoView .frame {
+  display: inline-flex;
+  position: relative;
+}
+
+.PhotoView .text {
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.PhotoView .uploaded-image {
+  width: 400px; /* 원하는 너비 */
+  height: 400px; /* 원하는 높이 */
+  object-fit: cover; /* 이미지가 고정된 크기에 맞게 자르거나 축소/확대됨 */
+  margin: 10px 0; /* 이미지 사이의 간격 조정 */
+}

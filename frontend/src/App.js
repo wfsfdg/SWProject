@@ -6,7 +6,8 @@ import MainPage from './MainPage';
 import LoggedinPage from './LoggedinPage';
 import PhotoListPage from './PhotolistPage';
 import UserListPage from './UserlistPage';
-import PhotoUpload from './PhotoUpload'
+import PhotoUpload from './PhotoUpload';
+import PhotoView from './PhotoView';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/photolist" element={<PhotoListPage />} />
       <Route path="/userlist" element={<UserListPage />} />
       <Route path="/photoupload" element={<PhotoUpload />} />
+      <Route path="/photoview" element={<PhotoView />} />
     </Routes>
   );
 };

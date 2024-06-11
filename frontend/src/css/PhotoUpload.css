@@ -288,6 +288,11 @@
   margin-top: 24px;
   padding: 6.5px 32px;
   cursor: pointer;
+  border: 1px solid;
+  border-radius: 8px;
+  height: 40px;
+  overflow: hidden;
+  width: 98px;
 }
 
 .PhotoUpload .sign-up-1 {

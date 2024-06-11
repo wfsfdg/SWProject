@@ -1,7 +1,11 @@
-from flask import Flask, request, jsonify, session
+from flask import Flask, request, jsonify, session, send_from_directory
 from flask_cors import CORS
 import sqlite3
 from flask_pymongo import PyMongo
+from bson import ObjectId
+import os
+import uuid
+
 
 app = Flask(__name__)
 app.secret_key = 'secret_key'
@@ -28,6 +32,20 @@ def create_user_table():
                  password TEXT NOT NULL)''')
     conn.commit()
     conn.close()
+
+
+def save_file(file):
+    # 파일 확장자를 포함하여 고유한 파일명 생성
+    ext = file.filename.split('.')[-1] if '.' in file.filename else ''
+    unique_filename = f"{uuid.uuid4().hex}.{ext}" if ext else uuid.uuid4().hex
+    file_path = os.path.join('uploads', unique_filename)
+
+    # 디렉토리가 존재하지 않으면 생성
+    if not os.path.exists('uploads'):
+        os.makedirs('uploads')
+
+    file.save(file_path)
+    return unique_filename
 
 def get_username_by_userid(userID):
     conn = get_db_connection()
@@ -108,22 +126,65 @@ def get_session():
 def upload_post():
     data = request.form
     files = request.files.getlist('files')
+    
+    # 모든 필드가 제대로 입력되었는지 검증
+    if not (data.get('username') and data.get('title') and data.get('tag') and data.get('description') and files):
+        return jsonify({'message': 'All fields and files are required.'}), 400
+
+    file_names = []
+    for file in files:
+        # 저장하고 고유 파일 이름을 리스트에 추가
+        if file and allowed_file(file.filename):
+            unique_filename = save_file(file)
+            file_names.append(unique_filename)
 
     new_post = {
         'username': data.get('username'),
         'title': data.get('title'),
         'tag': data.get('tag'),
         'description': data.get('description'),
-        'files': [file.filename for file in files]
+        'files': file_names
     }
 
-    # 파일 저장
-    for file in files:
-        file.save(os.path.join('uploads', file.filename))
-
     # DB에 저장 (postdata 데이터베이스)
-    mongo_postdata.db.posts.insert_one(new_post)
-    return {'message': 'Post uploaded successfully!'}, 200
+    result = mongo_postdata.db.posts.insert_one(new_post)
+
+    # 생성된 문서의 ID를 반환
+    return jsonify({'message': 'Post uploaded successfully!', 'post_id': str(result.inserted_id)}), 200
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg', 'gif'}
+
+
+@app.route('/api/posts', methods=['GET'])
+def get_posts():
+    limit = int(request.args.get('limit', 10))
+    offset = int(request.args.get('offset', 0))
+    posts = mongo_postdata.db.posts.find().skip(offset).limit(limit)
+    result = []
+    for post in posts:
+        post['_id'] = str(post['_id'])
+        result.append(post)
+    return jsonify(result), 200
+
+
+@app.route('/posts/<post_id>', methods=['GET'])
+def get_post(post_id):
+    post = mongo_postdata.db.posts.find_one({'_id': ObjectId(post_id)})
+    if post:
+        return jsonify({
+            'username': post['username'],
+            'title': post['title'],
+            'tag': post['tag'],
+            'description': post['description'],
+            'files': post['files']
+        }), 200
+    else:
+        return jsonify({'message': 'Post not found'}), 404
+
+@app.route('/uploads/<filename>')
+def get_file(filename):
+    return send_from_directory('uploads', filename)
 
 if __name__ == '__main__':
     app.run(debug=True, host='localhost', port=5000)

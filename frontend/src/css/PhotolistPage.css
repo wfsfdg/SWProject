@@ -69,6 +69,20 @@
     position: relative;
   }
   
+  .PhotolistPage .post-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* 이미지를 200px x 200px로 고정 */
+}
+.PhotolistPage .post-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
   .PhotolistPage .place {
     color: #111111;
     font-family: 'Poppins';
@@ -274,6 +288,28 @@
     padding: 86.5px 68px;
     width: 200px;
   }
+
+  .PhotolistPage .post-title{
+    font-family: 'Lato';
+    font-style: bold;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 48px;
+  }
+
+
+  .PhotolistPage .post-tag{
+    font-family: 'Lato';
+    font-style: bold;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color : #666666;
+  }
+
+  .PhotolistPage .post-decription{
+    font-family: 'Poppins';
+  }
   
   .PhotolistPage .pohto-1 {
     height: 24px;
@@ -296,9 +332,11 @@
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    min-height: 1000px;
-    width: 876px;
-  }
+    height: 1000px; /* 고정 높이 설정 */
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+    width: 100%;
+    cursor: pointer;
+}
   
   .PhotolistPage .button-3 {
     align-items: flex-start;
@@ -342,6 +380,10 @@
   .PhotolistPage .text-3 {
     margin-top: 188px;
   }
+  .PhotolistPage .enter-tag {
+    border:none;
+  }
+  
   
   .PhotolistPage .text-4 {
     margin-top: 179px;
