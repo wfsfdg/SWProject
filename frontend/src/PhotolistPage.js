@@ -19,6 +19,13 @@ const PhotolistPage = () => {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
+  const handleLoginClick=()=>{
+    navigate('/login');
+  };
+  const handleSignupClick = () => {
+    navigate('/signup');
+  };
+
   useEffect(() => {
     const fetchSession = async () => {
       try {
@@ -103,6 +110,10 @@ const PhotolistPage = () => {
     navigate('/photoupload')
   }
 
+  const handleUserClick = (name) => {
+    localStorage.setItem('selectedUsername', name);
+  };
+
   const handleLogout = async () => {
     try {
       const response = await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
@@ -120,6 +131,45 @@ const PhotolistPage = () => {
     navigate('/photoview');
   };
 
+  if (!isLoggedIn)
+    return (
+      <div className="container-center-horizontal">
+        <div className="PhotolistPage2 screen">
+          <div className="header-nav2">
+            <div className="flex-row2">
+              <img className="rectangle-772" src={rectangle77} alt="Rectangle 772" />
+              <div className="links2">
+                <div className="place2" onClick={handleMainPageClick}>Home</div>
+                <div className="x-list2" onClick={handleUserlistClick}>User List</div>
+                <div className="x-list2" onClick={handlePhotolistClick}>Photo List</div>
+              </div>
+              <div className="login-sign-up2">
+                <article className="button21">
+                  <div className="frame-2762">
+                    <img className="icons2" src={icons} alt="Icons2" />
+                  </div>
+                </article>
+                <article className="button-12 button-32">
+                  <div className="frame-276-12 frame-276-32">
+                    <div className="sign-up2 valign-text-middle" onClick={handleLoginClick}>Log in</div>
+                  </div>
+                </article>
+                <article className="button-22 button-32">
+                  <div className="frame-276-22 frame-276-32">
+                    <div className="sign-up-12 valign-text-middle" onClick={handleSignupClick}>Sign up</div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div className="divider22"></div>
+          </div>
+          <div className="view2">
+            <h1 className="title2">You can use it after logging in.</h1>
+          </div>
+        </div>
+      </div>
+    );
+  
   return (
     <div className="container-center-horizontal">
       <div className="PhotolistPage screen">

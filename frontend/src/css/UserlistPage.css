@@ -1,0 +1,556 @@
+/* screen - UserlistPage */
+
+.UserlistPage {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    min-height: 1697px;
+    width: 1440px;
+  }
+  @font-face {
+    font-family: 'GangwonEduPower';
+    src: url('../fonts/GangwonEduPower.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'GangwonEduAll';
+    src: url('../fonts/GangwonEduAll.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  .UserlistPage .header-nav {
+    align-items: center;
+    background-color: #FFFFFF;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #66666640;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 72px;
+    width: 1440px;
+  }
+  
+  .UserlistPage .flex-row {
+    align-items: center;
+    display: flex;
+    margin-top: 16px;
+    min-width: 1360px;
+  }
+  
+  .UserlistPage .rectangle-77 {
+    height: 40px;
+    object-fit: cover;
+    width: 40px;
+  }
+  
+  .UserlistPage .links {
+    align-items: flex-end;
+    display: inline-flex;
+    gap: 40px;
+    margin-left: 40px;
+    margin-top: 8.0px;
+    position: relative;
+  }
+  
+  .UserlistPage .place {
+    color: #111111;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .UserlistPage .x-list {
+    color: #666666cc;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .UserlistPage .login-sign-up {
+    align-items: center;
+    display: inline-flex;
+    gap: 16px;
+    justify-content: center;
+    margin-left: 857px;
+    position: relative;
+  }
+  
+  .UserlistPage .button {
+    border: 1px solid;
+    border-color: #111111;
+    border-radius: 8px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 40px;
+  }
+  
+  .UserlistPage .frame-276 {
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    left: 8px;
+    top: 8px;
+  }
+  
+  .UserlistPage .icons {
+    height: 24px;
+    position: relative;
+    width: 24px;
+  }
+  
+  .UserlistPage .button-1 {
+    background-color: #111111;
+    border: 1px solid;
+    border-radius: 8px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 98px;
+    cursor: pointer;
+  }
+  
+  .UserlistPage .frame-276-1 {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    left: 20px;
+    position: relative;
+    top: 8px;
+  }
+  
+  .UserlistPage .sign-up {
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .UserlistPage .divider-1 {
+    background-color: #d4d4d4;
+    height: 1px;
+    width: 1440px;
+  }
+  
+  .UserlistPage .view {
+    align-items: center;
+    background-color: #f3f2f0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 1185px;
+    padding: 51px 637px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .UserlistPage .title {
+    color: #06040a;
+    font-family: 'GangwonEduPower';
+    font-size: 40px;
+    font-weight: 800;
+    height: 80px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: 166px;
+  }
+  
+  .UserlistPage .user {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px #00000040;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    justify-content: center;
+    margin-left: -326.50px;
+    margin-right: -326.50px;
+    padding: 16px;
+    position: relative;
+    width: 819px;
+  }
+  
+  .UserlistPage .image-6 {
+    height: 50px;
+    object-fit: cover;
+    position: relative;
+    width: 50px;
+  }
+  
+  .UserlistPage .text {
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .UserlistPage .user-1 {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px #00000040;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: -5.00px;
+    margin-left: -326.50px;
+    margin-right: -326.50px;
+    padding: 16px;
+    position: relative;
+    width: 819px;
+  }
+  
+  .UserlistPage .group-8 {
+    align-items: flex-start;
+    display: flex;
+    min-width: 1440px;
+  }
+  
+  .UserlistPage .overlap-group {
+    height: 440px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .UserlistPage .footer {
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    height: 440px;
+    justify-content: flex-start;
+    left: 0;
+    padding: 48px 111px;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .UserlistPage .frame-275 {
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .UserlistPage .divider {
+    background-color: #66666640;
+    height: 1px;
+    position: relative;
+    width: 1218px;
+  }
+  
+  .UserlistPage .frame-274 {
+    align-items: flex-start;
+    flex: 0 0 auto;
+    gap: 155px;
+  }
+  
+  .UserlistPage .frame-269 {
+    align-items: flex-start;
+    flex: 0 0 auto;
+    gap: 64px;
+  }
+  
+  .UserlistPage .frame-268 {
+    align-items: flex-start;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .UserlistPage .product {
+    color: #333333;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .UserlistPage .frame-268-item {
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .UserlistPage .group-6 {
+    height: 24px;
+    position: relative;
+    width: 1131px;
+  }
+  
+  .UserlistPage .frame-272 {
+    align-items: flex-start;
+    gap: 56px;
+    top: 1px;
+  }
+  
+  .UserlistPage .copyright-2022 {
+    color: #333333;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .UserlistPage .image-5 {
+    height: 134px;
+    left: 199px;
+    object-fit: cover;
+    position: absolute;
+    top: 86px;
+    width: 300px;
+  }
+  
+  .UserlistPage .frame {
+    display: inline-flex;
+    position: relative;
+  }
+  .user-list-container {
+    max-height: 800px; /* 원하는 높이로 설정 */
+    overflow-y: auto;
+    padding: 10px; /* 컨테이너 내부 여백 추가 */
+    border: none; /* 경계선 추가 (선택 사항) */
+    margin-top: 20px; /* 위쪽 여백 추가 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 */
+    width: 1000px;
+  }
+  
+  .UserlistPage .view .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%; /* 부모 요소 너비에 맞춤 */
+    max-width: 600px; /* 원하는 최대 너비 설정 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    border-bottom: 1px solid #ccc; /* 경계선 추가 */
+    padding: 10px 0; /* 패딩 추가 */
+    cursor: pointer;
+  }
+
+  .UserlistPage .header-nav2 {
+    align-items: center;
+    background-color: #f5f5f5;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #66666640;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 72px;
+    width: 1440px;
+  }
+  
+  .UserlistPage .flex-row2{
+    align-items: center;
+    display: flex;
+    margin-top: 16px;
+    min-width: 1360px;
+  }
+  .UserlistPage .links2 {
+    align-items: flex-end;
+    display: inline-flex;
+    gap: 40px;
+    margin-left: 40px;
+    margin-top: 8.0px;
+    position: relative;
+  }
+  
+  .UserlistPage .place2 {
+    color: #111111;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .UserlistPage .x-list2 {
+    color: #666666cc;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .UserlistPage .rectangle-772 {
+    height: 40px;
+    object-fit: cover;
+    width: 40px;
+  }
+  
+  .UserlistPage .login-sign-up2 {
+    align-items: center;
+    display: inline-flex;
+    gap: 16px;
+    justify-content: center;
+    margin-left: 743px;
+    position: relative;
+  }
+  
+  .UserlistPage .button21 {
+    border: 1px solid;
+    border-color: #111111;
+    border-radius: 8px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 40px;
+  }
+  
+  .UserlistPage .frame-2762 {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    left: 8px;
+    position: relative;
+    top: 8px;
+  }
+  
+  .UserlistPage .button-12 {
+    border-color: #111111;
+  }
+  
+  .UserlistPage .frame-276-12 {
+    left: 26px;
+  }
+  
+  .UserlistPage .sign-up2 {
+    color: #111111;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .UserlistPage .button-22 {
+    background-color: #111111;
+  }
+  
+  .UserlistPage .frame-276-22 {
+    left: 19px;
+  }
+  
+  .UserlistPage .sign-up-12 {
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  .UserlistPage .icons2 {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.UserlistPage .rectangle-772 {
+    height: 40px;
+    object-fit: cover;
+    width: 40px;
+  }
+  
+.UserlistPage .button-12 {
+    border-color: #111111;
+  }
+.UserlistPage .button-32 {
+    border: 1px solid;
+    border-radius: 8px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 98px;
+    cursor: pointer;
+    align-items: center;
+  }
+.UserlistPage .button-22 {
+    background-color: #111111;
+  }  
+
+.UserlistPage .frame-276-32{
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    position: relative;
+    top: 8px;
+  }

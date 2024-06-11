@@ -192,5 +192,16 @@ def get_post(post_id):
 def get_file(filename):
     return send_from_directory('uploads', filename)
 
+@app.route('/usernames', methods=['GET'])
+def get_usernames():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute('SELECT username FROM users')
+    usernames = cursor.fetchall()
+    conn.close()
+
+    username_list = [user['username'] for user in usernames]
+    return jsonify(username_list), 200
+
 if __name__ == '__main__':
     app.run(debug=True, host='localhost', port=5000)
