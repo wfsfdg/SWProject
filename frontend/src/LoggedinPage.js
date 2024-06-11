@@ -34,6 +34,10 @@ const LoggedinPage = () => {
   const handlePhotolistClick=()=>{
     navigate('/photolist');
   };
+  const handleUserlistClick=()=>{
+    navigate('/userlist');
+  };
+
 
   const handleLogout = async () => {
     try {
@@ -56,7 +60,7 @@ const LoggedinPage = () => {
             <img className="rectangle-77" src={rectangle77} alt="Rectangle 77" />
             <div className="links">
               <div className="place">Home</div>
-              <div className="x-list">User List</div>
+              <div className="x-list" onClick={handleUserlistClick}>User List</div>
               <div className="x-list" onClick={handlePhotolistClick}>Photo List</div>
             </div>
             <div className="login-sign-up">

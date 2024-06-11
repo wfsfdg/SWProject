@@ -97,7 +97,6 @@ const SignupPage = () => {
                       <p className="label poppins-normal-granite-gray-16px">What should we call you?</p>
                     </div>
                     <input type="text" className="text-field-1"
-                      type="text"
                       placeholder="Enter your profile name"
                       value={Username}
                       onChange={(e) => setUsername(e.target.value)}
@@ -108,7 +107,6 @@ const SignupPage = () => {
                       <p className="label poppins-normal-granite-gray-16px">What’s your ID?</p>
                     </div>
                     <input type="text" className="text-field-1"
-                      type="text"
                       placeholder="Enter your ID"
                       value={ID}
                       onChange={(e) => setID(e.target.value)}
@@ -119,7 +117,6 @@ const SignupPage = () => {
                       <p className="label poppins-normal-granite-gray-16px">Create a password</p>
                     </div>
                     <input type="text" className="text-field-1"
-                      type="text"
                       placeholder="Enter your password"
                       value={Password}
                       onChange={(e) => setPassword(e.target.value)}
