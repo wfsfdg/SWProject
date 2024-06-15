@@ -42,6 +42,9 @@ const PhotoUpload = () => {
   const handleFileChange = (e) => {
     setAttachment(Array.from(e.target.files));
   };
+  const handleShowmessageClick=()=>{
+    navigate('/showmessage');
+  };
   const handlePhotolistClick=()=>{
     navigate('/photolist');
   };

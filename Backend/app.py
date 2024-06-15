@@ -13,6 +13,8 @@ CORS(app, supports_credentials=True, origins=["http://localhost:3000"])  # ÌÅ¥Îù
 
 app.config["MONGO_URI_POSTDATA"] = "mongodb://localhost:27017/postdata"
 mongo_postdata = PyMongo(app, uri="mongodb://localhost:27017/postdata")
+app.config["MONGO_URI_MESSAGES"] = "mongodb://localhost:27017/messages"
+mongo_messages = PyMongo(app, uri="mongodb://localhost:27017/messages")
 
 
 DATABASE = 'users.db'
@@ -231,6 +233,44 @@ def get_usernames():
 
     username_list = [user['username'] for user in usernames]
     return jsonify(username_list), 200
+
+@app.route('/messages', methods=['POST'])
+def send_message():
+    data = request.json
+    sender = data.get('sender')
+    receiver = data.get('receiver')
+    message = data.get('message')
+
+    if not sender or not receiver or not message:
+        return jsonify({'message': 'Missing fields: sender, receiver, and message are required.'}), 400
+
+    new_message = {
+        'sender': sender,
+        'receiver': receiver,
+        'message': message
+    }
+
+    result = mongo_messages.db.messages.insert_one(new_message)
+
+    return jsonify({'message': 'Message sent successfully!', 'message_id': str(result.inserted_id)}), 200
+
+
+
+@app.route('/get_messages', methods=['GET'])
+def get_messages():
+    username = request.args.get('username')
+
+    if not username:
+        return jsonify({'message': 'Missing username parameter'}), 400
+
+    messages = mongo_messages.db.messages.find({'receiver': username})
+    result = []
+    for message in messages:
+        message['_id'] = str(message['_id'])
+        result.append(message)
+    
+    return jsonify(result), 200
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='localhost', port=5000)

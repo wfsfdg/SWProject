@@ -26,6 +26,9 @@ const PhotolistPage = () => {
     navigate('/signup');
   };
 
+  const handleShowmessageClick=()=>{
+    navigate('/showmessage');
+  };
   useEffect(() => {
     const fetchSession = async () => {
       try {
@@ -182,7 +185,7 @@ const PhotolistPage = () => {
               <div className="x-list" onClick={handlePhotolistClick}>Photo List</div>
             </div>
             <div className="login-sign-up">
-              <article className="button-1">
+              <article className="button-1" onClick={handleShowmessageClick}>
                 <div className="frame-276"><img className="icons" src={icons} alt="Icons" /></div>
               </article>
               <article className="button-2" onClick={handleLogout}>

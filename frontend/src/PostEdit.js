@@ -16,6 +16,9 @@ const PhotoEdit = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [attachment, setAttachment] = useState([]);
   const navigate = useNavigate();
+  const handleShowmessageClick=()=>{
+    navigate('/showmessage');
+  };
   
   const postId = localStorage.getItem('postId');
 
@@ -131,10 +134,10 @@ const PhotoEdit = () => {
               <div className="x-list" onClick={handlePhotolistClick}>Photo List</div>
             </div>
             <div className="login-sign-up">
-              <article className="button">
+              <article className="button" onClick={handleShowmessageClick}>
                 <div className="frame-276 frame"><img className="icons" src={icons} alt="Icons" /></div>
               </article>
-              <article className="button-1 button-3">
+              <article className="button-1 button-3" onClick={handleLogout}>
                 <div className="frame-276-1"><div className="sign-up valign-text-middle">Log out</div></div>
               </article>
             </div>

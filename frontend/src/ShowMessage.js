@@ -1,35 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import './css/PhotoView.css';
+import './css/ShowMessage.css';
 import './css/styleguide.css';
 import './css/globals.css';
 import rectangle77 from './img/rectangle-77.png';
 import icons from './img/icons.svg';
 import image4 from './img/image-4.png';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-const PhotoView = () => {
-  const navigate = useNavigate();
-  const [post, setPost] = useState({
-    username: '',
-    title: '',
-    tag: '',
-    description: '',
-    files: []
-  });
+const ShowMessage = () => {
+  const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
-  const handleMainPageClick=()=>{
-    if (isLoggedIn)
-      navigate('/loggedin');
-    else
-      navigate('/');
-  }
-  const handleShowmessageClick=()=>{
-    navigate('/showmessage');
-  };
-  
   useEffect(() => {
     const fetchSession = async () => {
       try {
@@ -49,31 +33,39 @@ const PhotoView = () => {
   }, []);
 
   useEffect(() => {
-    const postId = localStorage.getItem('postId');
-    if (!postId) {
-      alert('No post ID found');
-      navigate('/'); // If no post ID, redirect to home
-      return;
-    }
-
-    const fetchPost = async () => {
+    const fetchMessages = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/posts/${postId}`);
-        setPost(response.data);
+        const response = await axios.get('http://localhost:5000/get_messages', {
+          params: { username }
+        });
+        setMessages(response.data);
       } catch (error) {
-        console.error('Error fetching post:', error);
+        console.error('Error fetching messages:', error);
       }
     };
 
-    fetchPost();
-  }, []);
+    fetchMessages();
+  }, [username]);
+
+  const handlePhotolistClick = () => {
+    navigate('/photolist');
+  };
+
+  const handleUserlistClick = () => {
+    navigate('/userlist');
+  };
+
+  const handleMainPageClick = () => {
+    if (isLoggedIn) navigate('/loggedin');
+    else navigate('/');
+  };
 
   const handleLogout = async () => {
     try {
       const response = await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
       if (response.status === 200) {
         alert('Logout successful');
-        navigate('/main');
+        navigate('/loggedin');
       }
     } catch (error) {
       console.error('Logout error', error);
@@ -81,62 +73,57 @@ const PhotoView = () => {
     }
   };
 
-  const handleModifyClick = () => {
-    navigate('/postedit')
-
-  };
-
-  const handleSendMessageClick = () => {
-    localStorage.setItem('receiver',post.username)
-    navigate('/sendmessage')
+  const handleReplyClick = (sender) => {
+    localStorage.setItem('receiver', sender);
+    navigate('/sendmessage');
   };
 
   return (
     <div className="container-center-horizontal">
-      <div className="PhotoView screen">
+      <div className="ShowMessage screen">
         <div className="header-nav">
           <div className="flex-row">
             <img className="rectangle-77" src={rectangle77} alt="Rectangle 77" />
             <div className="links">
               <div className="place" onClick={handleMainPageClick}>Home</div>
-              <div className="x-list" onClick={() => navigate('/userlist')}>User List</div>
-              <div className="x-list" onClick={() => navigate('/photolist')}>Photo List</div>
+              <div className="x-list" onClick={handleUserlistClick}>User List</div>
+              <div className="x-list" onClick={handlePhotolistClick}>Photo List</div>
             </div>
             <div className="login-sign-up">
-              <article className="button" onClick={handleShowmessageClick}>
-                <div className="frame-276"><img className="icons" src={icons} alt="Icons" /></div>
+              <article className="button">
+                <div className="frame-276 frame">
+                  <img className="icons" src={icons} alt="Icons" />
+                </div>
               </article>
-              <article className="button-1 button-5" onClick={handleLogout}>
-                <div className="frame-276-1"><div className="sign-up valign-text-middle">Log out</div></div>
+              <article className="button-1" onClick={handleLogout}>
+                <div className="frame-276-1">
+                  <div className="sign-up valign-text-middle">Log out</div>
+                </div>
               </article>
             </div>
           </div>
           <div className="divider-1"></div>
         </div>
         <div className="view">
-          <h1 className="h1">{post.title}</h1>
-          <div className="overlap-group">
-            <div className="text-2 text">{post.username}</div>
-            {username === post.username ? (
-              <div className="button-2 button-5" onClick={handleModifyClick}>
-                <div className="sign-up-1 valign-text-middle">Edit</div>
-              </div>
+          <h1 className="title">Received Messages</h1>
+          <div className="message-list-container">
+            {messages.length === 0 ? (
+              <p>No messages found.</p>
             ) : (
-              <div className="button-2 button-5" onClick={handleSendMessageClick}>
-                <div className="sign-up-1 valign-text-middle">Send DM</div>
-              </div>
+              messages.map((msg, index) => (
+                <div className="message" key={index}>
+                  <div>
+                    <p><strong>From:</strong> {msg.sender}</p>
+                    <p className="message-content">{msg.message}</p>
+                  </div>
+                  <button className="reply-button" onClick={() => handleReplyClick(msg.sender)}>Reply</button>
+                </div>
+              ))
             )}
-            <div className="button-3">
-              {post.tag}
-            </div>
           </div>
-          {post.files.map((file, index) => (
-            <img key={index} src={`http://localhost:5000/uploads/${file}`} alt="Post image" className="uploaded-image" />
-          ))}
-          <p className="text-1 text">{post.description}</p>
         </div>
-        <div className="group-9">
-          <div className="overlap-group1">
+        <div className="group-8">
+          <div className="overlap-group">
             <footer className="footer">
               <div className="frame-275 frame">
                 <div className="divider"></div>
@@ -144,7 +131,9 @@ const PhotoView = () => {
                   <div className="frame-269 frame">
                     <div className="frame-268 frame">
                       <div className="product valign-text-middle">Developer</div>
-                      <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">Lee Seunghyun</div>
+                      <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">
+                        Lee Seunghyun
+                      </div>
                       <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">2022112088</div>
                       <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">Choi Yoongi</div>
                       <div className="frame-268-item valign-text-middle poppins-normal-granite-gray-14px">2019112156</div>
@@ -159,7 +148,7 @@ const PhotoView = () => {
                 </div>
               </div>
             </footer>
-            <img className="image-4" src={image4} alt="image 4" />
+            <img className="image-5" src={image4} alt="image 5" />
           </div>
         </div>
       </div>
@@ -167,4 +156,4 @@ const PhotoView = () => {
   );
 };
 
-export default PhotoView;
+export default ShowMessage;

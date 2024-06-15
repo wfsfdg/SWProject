@@ -37,7 +37,9 @@ const LoggedinPage = () => {
   const handleUserlistClick=()=>{
     navigate('/userlist');
   };
-
+  const handleShowmessageClick=()=>{
+    navigate('/showmessage');
+  };
 
   const handleLogout = async () => {
     try {
@@ -69,7 +71,7 @@ const LoggedinPage = () => {
                 </div>
               <article className="button">
                 <div className="frame-276">
-                  <img className="icons" src={icons} alt="Icons" />
+                  <img className="icons" onClick={handleShowmessageClick} src={icons} alt="Icons" />
                 </div>
               </article>
               <article className="button-1">

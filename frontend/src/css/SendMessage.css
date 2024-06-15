@@ -1,0 +1,281 @@
+/* screen - SendMessage */
+
+.SendMessage {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    min-height: 1599px;
+    width: 1440px;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .SendMessage .header-nav {
+    background-color: #FFFFFF;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #66666640;
+    height: 72px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .SendMessage .flex-row {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    height: 40px;
+    left: 40px;
+    min-width: 349px;
+    position: absolute;
+    top: 16px;
+  }
+  
+  .SendMessage .rectangle-77 {
+    height: 40px;
+    object-fit: cover;
+    width: 40px;
+  }
+  
+  .SendMessage .links {
+    align-items: flex-end;
+    display: inline-flex;
+    gap: 40px;
+    margin-top: 8.0px;
+    position: relative;
+  }
+  
+  .SendMessage .place {
+    color: #111111;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .SendMessage .x-list {
+    color: #666666cc;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+  }
+  
+  .SendMessage .button {
+    background-color: #111111;
+    border: 1px solid;
+    border-radius: 8px;
+    height: 40px;
+    left: 1302px;
+    overflow: hidden;
+    position: absolute;
+    top: 16px;
+    width: 98px;
+    cursor: pointer;
+  }
+  
+  .SendMessage .frame-276 {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    left: 20px;
+    position: relative;
+    top: 8px;
+  }
+  
+  .SendMessage .sign-up {
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .SendMessage .divider {
+    background-color: #d4d4d4;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 71px;
+    width: 1440px;
+  }
+  
+  .SendMessage .background {
+    align-items: flex-start;
+    background-color: #f3f2f0;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    height: 1527px;
+    padding: 46px 152px;
+    width: 1440px;
+  }
+  
+  .SendMessage .view {
+    align-items: flex-start;
+    align-self: center;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-color: #111111;
+    border-radius: 8px;
+    display: flex;
+    height: 40px;
+    overflow: hidden;
+    padding: 7.5px 8px;
+    width: 40px;
+  }
+  
+  .SendMessage .icons {
+    height: 24px;
+    position: relative;
+    width: 24px;
+    cursor: pointer;
+  }
+  
+  .SendMessage .dm {
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-color: #666666;
+    border-radius: 24px;
+    display: flex;
+    height: 462px;
+    overflow: hidden;
+    padding: 15px 53px;
+    width: 1135px;
+  }
+  
+  .SendMessage .overlap-group {
+    height: 407px;
+    position: relative;
+    width: 1029px;
+  }
+  
+  .SendMessage .frame-300 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    left: 0;
+    min-height: 382px;
+    position: absolute;
+    top: 25px;
+    width: 1029px;
+  }
+  
+  .SendMessage .text-field {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: #666666;
+    border-radius: 12px;
+    display: flex;
+    height: 247px;
+    margin-left: 1.0px;
+    margin-top: 33px;
+    overflow: hidden;
+    padding: 12px 18px;
+    width: 1060px;
+  }
+  
+  .SendMessage .message {
+    color: #666666;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 30px;
+  }
+  
+  .SendMessage .button-container {
+    align-items: flex-start;
+    display: flex;
+    gap: 152px;
+    margin-right: 17.0px;
+    min-width: 886px;
+  }
+  
+  .SendMessage .button-1 {
+    align-items: flex-start;
+    background-color: #595959;
+    border-radius: 40px;
+    display: flex;
+    height: 64px;
+    overflow: hidden;
+    padding: 14px 147.5px;
+    width: 367px;
+    cursor: pointer;
+  }
+  
+  .SendMessage .delete {
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 500;
+    height: 33px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 1px;
+    min-width: 71px;
+    text-align: center;
+  }
+  
+  .SendMessage .button-2 {
+    align-items: flex-start;
+    background-color: #cbc4b9;
+    border-radius: 40px;
+    display: flex;
+    height: 64px;
+    overflow: hidden;
+    padding: 14px 152.5px;
+    width: 367px;
+    cursor: pointer;
+  }
+  
+  .SendMessage .reply {
+    color: #000000;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 500;
+    height: 33px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 1px;
+    min-width: 61px;
+    text-align: center;
+  }
+  
+  .SendMessage .text-1 {
+    color: #333333;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-weight: 500;
+    height: 48px;
+    left: 470px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+  }
+  

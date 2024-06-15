@@ -67,7 +67,7 @@ const UserListPage = () => {
 
   const handleUserClick = (name) => {
     if (isLoggedIn){
-    localStorage.setItem('selectedUsername', name);
+    localStorage.setItem('receiver', name);
     navigate('/sendmessage');}
     else{
         alert('you need to get logged in first')
