@@ -250,6 +250,7 @@
   border: 1px solid;
   overflow: hidden;
   color : #FFFFFF;
+  cursor: pointer;
 }
 
 .PhotoView .text-3 {
@@ -409,6 +410,7 @@
 .PhotoView .button-5 {
   border: 1px solid;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .PhotoView .frame {

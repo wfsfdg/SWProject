@@ -24,8 +24,9 @@ const PhotoView = () => {
     if (isLoggedIn)
       navigate('/loggedin');
     else
-    navigate('/');
+      navigate('/');
   }
+  
   useEffect(() => {
     const fetchSession = async () => {
       try {
@@ -77,6 +78,16 @@ const PhotoView = () => {
     }
   };
 
+  const handleModifyClick = () => {
+    navigate('/postedit')
+
+  };
+
+  const handleSendDMClick = () => {
+    // Send DM 버튼 클릭 시 수행할 동작을 여기에 추가합니다.
+    alert('Send DM button clicked');
+  };
+
   return (
     <div className="container-center-horizontal">
       <div className="PhotoView screen">
@@ -103,10 +114,18 @@ const PhotoView = () => {
           <h1 className="h1">{post.title}</h1>
           <div className="overlap-group">
             <div className="text-2 text">{post.username}</div>
-            <div className="button-2 button-5"><div className="sign-up-1 valign-text-middle">Send DM</div></div>
+            {username === post.username ? (
+              <div className="button-2 button-5" onClick={handleModifyClick}>
+                <div className="sign-up-1 valign-text-middle">Edit</div>
+              </div>
+            ) : (
+              <div className="button-2 button-5" onClick={handleSendDMClick}>
+                <div className="sign-up-1 valign-text-middle">Send DM</div>
+              </div>
+            )}
             <div className="button-3">
-  {post.tag}
-</div>
+              {post.tag}
+            </div>
           </div>
           {post.files.map((file, index) => (
             <img key={index} src={`http://localhost:5000/uploads/${file}`} alt="Post image" className="uploaded-image" />

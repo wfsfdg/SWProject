@@ -113,6 +113,7 @@
   overflow: hidden;
   position: relative;
   width: 40px;
+  cursor: pointer;
 }
 
 .PhotoUpload .frame-276 {
@@ -425,6 +426,7 @@
   height: 40px;
   overflow: hidden;
   width: 98px;
+  cursor: pointer;
 }
 
 .PhotoUpload .frame {

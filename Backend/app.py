@@ -187,6 +187,35 @@ def get_post(post_id):
         }), 200
     else:
         return jsonify({'message': 'Post not found'}), 404
+    
+@app.route('/posts/<post_id>', methods=['PUT'])
+def update_post(post_id):
+    data = request.form
+    files = request.files.getlist('files')
+
+    update_fields = {}
+    if data.get('username'):
+        update_fields['username'] = data.get('username')
+    if data.get('title'):
+        update_fields['title'] = data.get('title')
+    if data.get('tag'):
+        update_fields['tag'] = data.get('tag')
+    if data.get('description'):
+        update_fields['description'] = data.get('description')
+    if files:
+        file_names = []
+        for file in files:
+            if file and allowed_file(file.filename):
+                unique_filename = save_file(file)
+                file_names.append(unique_filename)
+        update_fields['files'] = file_names
+
+    result = mongo_postdata.db.posts.update_one({'_id': ObjectId(post_id)}, {'$set': update_fields})
+
+    if result.modified_count > 0:
+        return jsonify({'message': 'Post updated successfully!'}), 200
+    else:
+        return jsonify({'message': 'No changes made to the post.'}), 400
 
 @app.route('/uploads/<filename>')
 def get_file(filename):
