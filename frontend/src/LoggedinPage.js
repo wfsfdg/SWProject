@@ -107,7 +107,7 @@ const LoggedinPage = () => {
           <div className="card">
             <div className="frame-14560">
               <div className="frame-14565">
-                <div className="x-list-1">User List</div>
+                <div className="x-list-1" onClick={handleUserlistClick}>User List</div>
                 <p className="text_label">Click to view the list of users</p>
               </div>
             </div>
